@@ -11,5 +11,7 @@ public with sharing class Calculator {
     }
 =======
     })
->>>>>>> 8e68083 (initial commit)
+       public integer subs(integer a, integer b){
+        return a-b;
+    })
 }
