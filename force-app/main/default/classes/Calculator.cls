@@ -7,7 +7,7 @@
 public with sharing class Calculator {
     public Calculator() {
 } 
-    public integer sub(integer a, Integer b){
+    public integer subs(integer a, Integer b){
         return a-b;
     }
 }
