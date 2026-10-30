@@ -12,7 +12,6 @@
  **************************************************************************/
 public with sharing class Calculator {
     public Calculator() {
-
 }
     public Integer addition(integer a , integer b){
         return a+b;
