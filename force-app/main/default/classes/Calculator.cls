@@ -18,7 +18,6 @@ public with sharing class Calculator {
         return a+b;
         
     }
-
     public integer substraction(integer a, Integer b){
         return a-b;
     }
