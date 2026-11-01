@@ -14,10 +14,13 @@
 public with sharing class Calculator {
     public Calculator() {
 }
+<<<<<<< HEAD
     public Integer addition(integer a , integer b){
         return a+b;
     }
     public integer substraction(integer a, Integer b){
         return a-b;
     }
+=======
+>>>>>>> 157185a (claude related changes)
 }
