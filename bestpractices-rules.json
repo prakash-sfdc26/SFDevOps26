@@ -1,0 +1,4925 @@
+{
+  "rules": [
+    {
+      "name": "AvoidTermsWithImplicitBias",
+      "description": "\"Detects usage of terms that reinforce implicit bias.",
+      "engine": "regex",
+      "severity": 5,
+      "tags": [
+        "Recommended",
+        "BestPractices"
+      ],
+      "resources": [
+        "https://www.salesforce.com/news/stories/salesforce-updates-technical-language-in-ongoing-effort-to-address-implicit-bias/"
+      ]
+    },
+    {
+      "name": "MinVersionForAbstractVirtualClassesWithPrivateMethod",
+      "description": "Detects private methods within abstract/virtual classes when the corresponding API version of the class is less than v61.0.",
+      "engine": "regex",
+      "severity": 2,
+      "tags": [
+        "Recommended",
+        "BestPractices",
+        "Apex"
+      ],
+      "resources": []
+    },
+    {
+      "name": "@lwc/lwc-platform/no-create-context-provider",
+      "description": "disallow import of \"createContextProvider\" from \"lwc\"",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "LWC",
+        "BestPractices",
+        "JavaScript"
+      ],
+      "resources": []
+    },
+    {
+      "name": "@lwc/lwc-platform/no-deprecated-module-import",
+      "description": "disallow importing deprecated modules",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "LWC",
+        "BestPractices",
+        "JavaScript"
+      ],
+      "resources": []
+    },
+    {
+      "name": "@lwc/lwc-platform/no-dynamic-import-identifier",
+      "description": "disallow dynamic import with an identifier import(id), import(\"stringLiteral\" + id)",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "LWC",
+        "BestPractices",
+        "JavaScript"
+      ],
+      "resources": []
+    },
+    {
+      "name": "@lwc/lwc-platform/no-inline-disable",
+      "description": "disallow inline disablement of ESLint rule",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "LWC",
+        "BestPractices",
+        "JavaScript"
+      ],
+      "resources": []
+    },
+    {
+      "name": "@lwc/lwc-platform/no-interop",
+      "description": "disallow import of \"aura\"",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "LWC",
+        "BestPractices",
+        "JavaScript"
+      ],
+      "resources": []
+    },
+    {
+      "name": "@lwc/lwc-platform/no-interop-create",
+      "description": "disallow import of \"createComponent\" from \"aura\"",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "LWC",
+        "BestPractices",
+        "JavaScript"
+      ],
+      "resources": []
+    },
+    {
+      "name": "@lwc/lwc-platform/no-interop-dispatch",
+      "description": "disallow import of \"dispatchGlobalEvent\" from \"aura\"",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "LWC",
+        "BestPractices",
+        "JavaScript"
+      ],
+      "resources": []
+    },
+    {
+      "name": "@lwc/lwc-platform/no-interop-execute",
+      "description": "disallow import of \"executeGlobalController\" from \"aura\"",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "LWC",
+        "BestPractices",
+        "JavaScript"
+      ],
+      "resources": []
+    },
+    {
+      "name": "@lwc/lwc-platform/no-interop-execute-controller-with-client-def",
+      "description": "disallow import of \"executeControllerWithClientSideActionDef\" from \"aura\"",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "LWC",
+        "BestPractices",
+        "JavaScript"
+      ],
+      "resources": []
+    },
+    {
+      "name": "@lwc/lwc-platform/no-interop-execute-privileged",
+      "description": "disallow import of \"unstable_executeGlobalControllerPrivileged\" from \"aura\"",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "LWC",
+        "BestPractices",
+        "JavaScript"
+      ],
+      "resources": []
+    },
+    {
+      "name": "@lwc/lwc-platform/no-interop-execute-raw-response",
+      "description": "disallow import of \"executeGlobalControllerRawResponse\" from \"aura\"",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "LWC",
+        "BestPractices",
+        "JavaScript"
+      ],
+      "resources": []
+    },
+    {
+      "name": "@lwc/lwc-platform/no-interop-execute-with-callback",
+      "description": "disallow import of \"executeGlobalControllerWithCallback\" from \"aura\"",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "LWC",
+        "BestPractices",
+        "JavaScript"
+      ],
+      "resources": []
+    },
+    {
+      "name": "@lwc/lwc-platform/no-interop-get-event",
+      "description": "disallow import of \"getEventDef\" from \"aura\"",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "LWC",
+        "BestPractices",
+        "JavaScript"
+      ],
+      "resources": []
+    },
+    {
+      "name": "@lwc/lwc-platform/no-interop-get-module",
+      "description": "disallow import of \"getModule\" from \"aura\"",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "LWC",
+        "BestPractices",
+        "JavaScript"
+      ],
+      "resources": []
+    },
+    {
+      "name": "@lwc/lwc-platform/no-interop-is-external-definition",
+      "description": "disallow import of \"isExternalDefinition\" from \"aura\"",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "LWC",
+        "BestPractices",
+        "JavaScript"
+      ],
+      "resources": []
+    },
+    {
+      "name": "@lwc/lwc-platform/no-interop-load-definitions",
+      "description": "disallow import of \"unstable_loadComponentDefs\" from \"aura\"",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "LWC",
+        "BestPractices",
+        "JavaScript"
+      ],
+      "resources": []
+    },
+    {
+      "name": "@lwc/lwc-platform/no-interop-module-instrumentation",
+      "description": "disallow import of \"aura-instrumentation\"",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "LWC",
+        "BestPractices",
+        "JavaScript"
+      ],
+      "resources": []
+    },
+    {
+      "name": "@lwc/lwc-platform/no-interop-module-storage",
+      "description": "disallow import of \"aura-storage\"",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "LWC",
+        "BestPractices",
+        "JavaScript"
+      ],
+      "resources": []
+    },
+    {
+      "name": "@lwc/lwc-platform/no-interop-register",
+      "description": "disallow import of \"registerModule\" from \"aura\"",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "LWC",
+        "BestPractices",
+        "JavaScript"
+      ],
+      "resources": []
+    },
+    {
+      "name": "@lwc/lwc-platform/no-interop-render",
+      "description": "disallow import of \"renderComponent\" from \"aura\"",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "LWC",
+        "BestPractices",
+        "JavaScript"
+      ],
+      "resources": []
+    },
+    {
+      "name": "@lwc/lwc-platform/no-interop-sanitize",
+      "description": "disallow import of \"sanitizeDOM\" from \"aura\"",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "LWC",
+        "BestPractices",
+        "JavaScript"
+      ],
+      "resources": []
+    },
+    {
+      "name": "@lwc/lwc-platform/no-lds-aura-controller-method",
+      "description": "disallow import of \"UnstableAuraControllerMethod\" from \"force/ldsAuraControllerMethod\"",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "LWC",
+        "BestPractices",
+        "JavaScript"
+      ],
+      "resources": []
+    },
+    {
+      "name": "@lwc/lwc-platform/no-process-env",
+      "description": "restrict usage of the \"process\" global object",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "LWC",
+        "BestPractices",
+        "JavaScript"
+      ],
+      "resources": []
+    },
+    {
+      "name": "@lwc/lwc-platform/valid-dynamic-import-hint",
+      "description": "validate hint comment in a dynamic import statement",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "LWC",
+        "BestPractices",
+        "JavaScript"
+      ],
+      "resources": []
+    },
+    {
+      "name": "@lwc/lwc/newer-version-available",
+      "description": "suggest newer versions of module imports when available",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "LWC",
+        "BestPractices",
+        "JavaScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://github.com/salesforce/eslint-plugin-lwc/blob/v3.5.0/docs/rules/newer-version-available.md"
+      ]
+    },
+    {
+      "name": "@lwc/lwc/no-api-reassignments",
+      "description": "prevent public property reassignments",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "LWC",
+        "BestPractices",
+        "JavaScript"
+      ],
+      "resources": [
+        "https://github.com/salesforce/eslint-plugin-lwc/blob/v3.5.0/docs/rules/no-api-reassignments.md"
+      ]
+    },
+    {
+      "name": "@lwc/lwc/no-async-operation",
+      "description": "restrict usage of async operations",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "LWC",
+        "BestPractices",
+        "JavaScript"
+      ],
+      "resources": [
+        "https://github.com/salesforce/eslint-plugin-lwc/blob/v3.5.0/docs/rules/no-async-operation.md"
+      ]
+    },
+    {
+      "name": "@lwc/lwc/no-deprecated",
+      "description": "disallow usage of deprecated LWC APIs",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "LWC",
+        "BestPractices",
+        "JavaScript"
+      ],
+      "resources": [
+        "https://github.com/salesforce/eslint-plugin-lwc/blob/v3.5.0/docs/rules/no-deprecated.md"
+      ]
+    },
+    {
+      "name": "@lwc/lwc/no-disallowed-lwc-imports",
+      "description": "restrict unexpected imports from the lwc package",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "LWC",
+        "BestPractices",
+        "JavaScript"
+      ],
+      "resources": [
+        "https://github.com/salesforce/eslint-plugin-lwc/blob/v3.5.0/docs/rules/no-disallowed-lwc-imports.md"
+      ]
+    },
+    {
+      "name": "@lwc/lwc/no-unexpected-wire-adapter-usages",
+      "description": "restrict unexpected wire adapter usages",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "LWC",
+        "BestPractices",
+        "JavaScript"
+      ],
+      "resources": [
+        "https://github.com/salesforce/eslint-plugin-lwc/blob/v3.5.0/docs/rules/no-unexpected-wire-adapter-usages.md"
+      ]
+    },
+    {
+      "name": "@lwc/lwc/no-unknown-wire-adapters",
+      "description": "restrict usage of unknown wire adapters",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "LWC",
+        "BestPractices",
+        "JavaScript"
+      ],
+      "resources": [
+        "https://github.com/salesforce/eslint-plugin-lwc/blob/v3.5.0/docs/rules/no-unknown-wire-adapters.md"
+      ]
+    },
+    {
+      "name": "@lwc/lwc/prefer-custom-event",
+      "description": "suggest usage of \"CustomEvent\" over \"Event\" constructor",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "LWC",
+        "BestPractices",
+        "JavaScript"
+      ],
+      "resources": [
+        "https://github.com/salesforce/eslint-plugin-lwc/blob/v3.5.0/docs/rules/prefer-custom-event.md"
+      ]
+    },
+    {
+      "name": "@salesforce-ux/slds/enforce-bem-usage",
+      "description": "Replace BEM double-dash syntax in class names with single underscore syntax",
+      "engine": "eslint",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "SLDS",
+        "BestPractices",
+        "HTML",
+        "Fixable"
+      ],
+      "resources": [
+        "https://developer.salesforce.com/docs/platform/slds-linter/guide/reference-rules.html#enforce-bem-usage"
+      ]
+    },
+    {
+      "name": "@salesforce-ux/slds/no-slds-class-overrides",
+      "description": "Create new custom CSS classes instead of overriding SLDS selectors. For more information, see the Lightning Web Components Developer Guide.",
+      "engine": "eslint",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "SLDS",
+        "BestPractices",
+        "CSS"
+      ],
+      "resources": [
+        "https://developer.salesforce.com/docs/platform/slds-linter/guide/reference-rules.html#no-slds-class-overrides"
+      ]
+    },
+    {
+      "name": "@salesforce-ux/slds/no-slds-namespace-for-custom-hooks",
+      "description": "To differentiate custom styling hooks from SLDS styling hooks, create custom styling hooks in your namespace.",
+      "engine": "eslint",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "SLDS",
+        "BestPractices",
+        "CSS"
+      ],
+      "resources": [
+        "https://developer.salesforce.com/docs/platform/slds-linter/guide/reference-rules.html#no-slds-namespace-for-custom-hooks"
+      ]
+    },
+    {
+      "name": "@salesforce-ux/slds/no-sldshook-fallback-for-lwctoken",
+      "description": "Avoid using --slds styling hooks as fallback values for --lwc tokens.",
+      "engine": "eslint",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "SLDS",
+        "BestPractices",
+        "CSS"
+      ],
+      "resources": [
+        "https://developer.salesforce.com/docs/platform/slds-linter/guide/reference-rules.html#no-sldshook-fallback-for-lwctoken"
+      ]
+    },
+    {
+      "name": "@salesforce-ux/slds/reduce-annotations",
+      "description": "Remove your annotations and update your code.",
+      "engine": "eslint",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "SLDS",
+        "BestPractices",
+        "CSS"
+      ],
+      "resources": [
+        "https://developer.salesforce.com/docs/platform/slds-linter/guide/reference-rules.html#reduce-annotations"
+      ]
+    },
+    {
+      "name": "@typescript-eslint/adjacent-overload-signatures",
+      "description": "Require that function overload signatures be consecutive",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://typescript-eslint.io/rules/adjacent-overload-signatures"
+      ]
+    },
+    {
+      "name": "@typescript-eslint/array-type",
+      "description": "Require consistently using either `T[]` or `Array<T>` for arrays",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "TypeScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://typescript-eslint.io/rules/array-type"
+      ]
+    },
+    {
+      "name": "@typescript-eslint/ban-tslint-comment",
+      "description": "Disallow `// tslint:<rule-flag>` comments",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "TypeScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://typescript-eslint.io/rules/ban-tslint-comment"
+      ]
+    },
+    {
+      "name": "@typescript-eslint/class-methods-use-this",
+      "description": "Enforce that class methods utilize `this`",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://typescript-eslint.io/rules/class-methods-use-this"
+      ]
+    },
+    {
+      "name": "@typescript-eslint/consistent-generic-constructors",
+      "description": "Enforce specifying generic type arguments on type annotation or constructor name of a constructor call",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "TypeScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://typescript-eslint.io/rules/consistent-generic-constructors"
+      ]
+    },
+    {
+      "name": "@typescript-eslint/consistent-indexed-object-style",
+      "description": "Require or disallow the `Record` type",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "TypeScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://typescript-eslint.io/rules/consistent-indexed-object-style"
+      ]
+    },
+    {
+      "name": "@typescript-eslint/consistent-return",
+      "description": "Require `return` statements to either always or never specify values",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://typescript-eslint.io/rules/consistent-return"
+      ]
+    },
+    {
+      "name": "@typescript-eslint/consistent-type-assertions",
+      "description": "Enforce consistent usage of type assertions",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "TypeScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://typescript-eslint.io/rules/consistent-type-assertions"
+      ]
+    },
+    {
+      "name": "@typescript-eslint/consistent-type-definitions",
+      "description": "Enforce type definitions to consistently use either `interface` or `type`",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "TypeScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://typescript-eslint.io/rules/consistent-type-definitions"
+      ]
+    },
+    {
+      "name": "@typescript-eslint/consistent-type-exports",
+      "description": "Enforce consistent usage of type exports",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "TypeScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://typescript-eslint.io/rules/consistent-type-exports"
+      ]
+    },
+    {
+      "name": "@typescript-eslint/consistent-type-imports",
+      "description": "Enforce consistent usage of type imports",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "TypeScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://typescript-eslint.io/rules/consistent-type-imports"
+      ]
+    },
+    {
+      "name": "@typescript-eslint/default-param-last",
+      "description": "Enforce default parameters to be last",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://typescript-eslint.io/rules/default-param-last"
+      ]
+    },
+    {
+      "name": "@typescript-eslint/dot-notation",
+      "description": "Enforce dot notation whenever possible",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "TypeScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://typescript-eslint.io/rules/dot-notation"
+      ]
+    },
+    {
+      "name": "@typescript-eslint/init-declarations",
+      "description": "Require or disallow initialization in variable declarations",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://typescript-eslint.io/rules/init-declarations"
+      ]
+    },
+    {
+      "name": "@typescript-eslint/max-params",
+      "description": "Enforce a maximum number of parameters in function definitions",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://typescript-eslint.io/rules/max-params"
+      ]
+    },
+    {
+      "name": "@typescript-eslint/member-ordering",
+      "description": "Require a consistent member declaration order",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://typescript-eslint.io/rules/member-ordering"
+      ]
+    },
+    {
+      "name": "@typescript-eslint/method-signature-style",
+      "description": "Enforce using a particular method signature syntax",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "TypeScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://typescript-eslint.io/rules/method-signature-style"
+      ]
+    },
+    {
+      "name": "@typescript-eslint/naming-convention",
+      "description": "Enforce naming conventions for everything across a codebase",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://typescript-eslint.io/rules/naming-convention"
+      ]
+    },
+    {
+      "name": "@typescript-eslint/no-array-constructor",
+      "description": "Disallow generic `Array` constructors",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "BestPractices",
+        "TypeScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://typescript-eslint.io/rules/no-array-constructor"
+      ]
+    },
+    {
+      "name": "@typescript-eslint/no-base-to-string",
+      "description": "Require `.toString()` and `.toLocaleString()` to only be called on objects which provide useful information when stringified",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://typescript-eslint.io/rules/no-base-to-string"
+      ]
+    },
+    {
+      "name": "@typescript-eslint/no-duplicate-type-constituents",
+      "description": "Disallow duplicate constituents of union or intersection types",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "TypeScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://typescript-eslint.io/rules/no-duplicate-type-constituents"
+      ]
+    },
+    {
+      "name": "@typescript-eslint/no-dynamic-delete",
+      "description": "Disallow using the `delete` operator on computed key expressions",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://typescript-eslint.io/rules/no-dynamic-delete"
+      ]
+    },
+    {
+      "name": "@typescript-eslint/no-empty-function",
+      "description": "Disallow empty functions",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://typescript-eslint.io/rules/no-empty-function"
+      ]
+    },
+    {
+      "name": "@typescript-eslint/no-empty-object-type",
+      "description": "Disallow accidentally using the \"empty object\" type",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "BestPractices",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://typescript-eslint.io/rules/no-empty-object-type"
+      ]
+    },
+    {
+      "name": "@typescript-eslint/no-explicit-any",
+      "description": "Disallow the `any` type",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "BestPractices",
+        "TypeScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://typescript-eslint.io/rules/no-explicit-any"
+      ]
+    },
+    {
+      "name": "@typescript-eslint/no-extraneous-class",
+      "description": "Disallow classes used as namespaces",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://typescript-eslint.io/rules/no-extraneous-class"
+      ]
+    },
+    {
+      "name": "@typescript-eslint/no-implied-eval",
+      "description": "Disallow the use of `eval()`-like functions",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://typescript-eslint.io/rules/no-implied-eval"
+      ]
+    },
+    {
+      "name": "@typescript-eslint/no-inferrable-types",
+      "description": "Disallow explicit type declarations for variables or parameters initialized to a number, string, or boolean",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "TypeScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://typescript-eslint.io/rules/no-inferrable-types"
+      ]
+    },
+    {
+      "name": "@typescript-eslint/no-invalid-this",
+      "description": "Disallow `this` keywords outside of classes or class-like objects",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://typescript-eslint.io/rules/no-invalid-this"
+      ]
+    },
+    {
+      "name": "@typescript-eslint/no-magic-numbers",
+      "description": "Disallow magic numbers",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://typescript-eslint.io/rules/no-magic-numbers"
+      ]
+    },
+    {
+      "name": "@typescript-eslint/no-meaningless-void-operator",
+      "description": "Disallow the `void` operator except when used to discard a value",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "TypeScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://typescript-eslint.io/rules/no-meaningless-void-operator"
+      ]
+    },
+    {
+      "name": "@typescript-eslint/no-namespace",
+      "description": "Disallow TypeScript namespaces",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "BestPractices",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://typescript-eslint.io/rules/no-namespace"
+      ]
+    },
+    {
+      "name": "@typescript-eslint/no-redeclare",
+      "description": "Disallow variable redeclaration",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://typescript-eslint.io/rules/no-redeclare"
+      ]
+    },
+    {
+      "name": "@typescript-eslint/no-redundant-type-constituents",
+      "description": "Disallow members of unions and intersections that do nothing or override type information",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://typescript-eslint.io/rules/no-redundant-type-constituents"
+      ]
+    },
+    {
+      "name": "@typescript-eslint/no-restricted-types",
+      "description": "Disallow certain types",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "TypeScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://typescript-eslint.io/rules/no-restricted-types"
+      ]
+    },
+    {
+      "name": "@typescript-eslint/no-shadow",
+      "description": "Disallow variable declarations from shadowing variables declared in the outer scope",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://typescript-eslint.io/rules/no-shadow"
+      ]
+    },
+    {
+      "name": "@typescript-eslint/no-this-alias",
+      "description": "Disallow aliasing `this`",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "BestPractices",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://typescript-eslint.io/rules/no-this-alias"
+      ]
+    },
+    {
+      "name": "@typescript-eslint/no-unnecessary-boolean-literal-compare",
+      "description": "Disallow unnecessary equality comparisons against boolean literals",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "TypeScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://typescript-eslint.io/rules/no-unnecessary-boolean-literal-compare"
+      ]
+    },
+    {
+      "name": "@typescript-eslint/no-unnecessary-condition",
+      "description": "Disallow conditionals where the type is always truthy or always falsy",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://typescript-eslint.io/rules/no-unnecessary-condition"
+      ]
+    },
+    {
+      "name": "@typescript-eslint/no-unnecessary-parameter-property-assignment",
+      "description": "Disallow unnecessary assignment of constructor property parameter",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://typescript-eslint.io/rules/no-unnecessary-parameter-property-assignment"
+      ]
+    },
+    {
+      "name": "@typescript-eslint/no-unnecessary-qualifier",
+      "description": "Disallow unnecessary namespace qualifiers",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "TypeScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://typescript-eslint.io/rules/no-unnecessary-qualifier"
+      ]
+    },
+    {
+      "name": "@typescript-eslint/no-unnecessary-template-expression",
+      "description": "Disallow unnecessary template expressions",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "TypeScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://typescript-eslint.io/rules/no-unnecessary-template-expression"
+      ]
+    },
+    {
+      "name": "@typescript-eslint/no-unnecessary-type-arguments",
+      "description": "Disallow type arguments that are equal to the default",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "TypeScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://typescript-eslint.io/rules/no-unnecessary-type-arguments"
+      ]
+    },
+    {
+      "name": "@typescript-eslint/no-unnecessary-type-assertion",
+      "description": "Disallow type assertions that do not change the type of an expression",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "TypeScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://typescript-eslint.io/rules/no-unnecessary-type-assertion"
+      ]
+    },
+    {
+      "name": "@typescript-eslint/no-unnecessary-type-constraint",
+      "description": "Disallow unnecessary constraints on generic types",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "BestPractices",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://typescript-eslint.io/rules/no-unnecessary-type-constraint"
+      ]
+    },
+    {
+      "name": "@typescript-eslint/no-unnecessary-type-conversion",
+      "description": "Disallow conversion idioms when they do not change the type or value of the expression",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://typescript-eslint.io/rules/no-unnecessary-type-conversion"
+      ]
+    },
+    {
+      "name": "@typescript-eslint/no-unsafe-enum-comparison",
+      "description": "Disallow comparing an enum value with a non-enum value",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://typescript-eslint.io/rules/no-unsafe-enum-comparison"
+      ]
+    },
+    {
+      "name": "@typescript-eslint/no-unused-expressions",
+      "description": "Disallow unused expressions",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "BestPractices",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://typescript-eslint.io/rules/no-unused-expressions"
+      ]
+    },
+    {
+      "name": "@typescript-eslint/no-useless-default-assignment",
+      "description": "Disallow default values that will never be used",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "TypeScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://typescript-eslint.io/rules/no-useless-default-assignment"
+      ]
+    },
+    {
+      "name": "@typescript-eslint/no-useless-empty-export",
+      "description": "Disallow empty exports that don't change anything in a module file",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "TypeScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://typescript-eslint.io/rules/no-useless-empty-export"
+      ]
+    },
+    {
+      "name": "@typescript-eslint/non-nullable-type-assertion-style",
+      "description": "Enforce non-null assertions over explicit type assertions",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "TypeScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://typescript-eslint.io/rules/non-nullable-type-assertion-style"
+      ]
+    },
+    {
+      "name": "@typescript-eslint/prefer-as-const",
+      "description": "Enforce the use of `as const` over literal type",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "BestPractices",
+        "TypeScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://typescript-eslint.io/rules/prefer-as-const"
+      ]
+    },
+    {
+      "name": "@typescript-eslint/prefer-destructuring",
+      "description": "Require destructuring from arrays and/or objects",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "TypeScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://typescript-eslint.io/rules/prefer-destructuring"
+      ]
+    },
+    {
+      "name": "@typescript-eslint/prefer-enum-initializers",
+      "description": "Require each enum member value to be explicitly initialized",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://typescript-eslint.io/rules/prefer-enum-initializers"
+      ]
+    },
+    {
+      "name": "@typescript-eslint/prefer-find",
+      "description": "Enforce the use of Array.prototype.find() over Array.prototype.filter() followed by [0] when looking for a single result",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://typescript-eslint.io/rules/prefer-find"
+      ]
+    },
+    {
+      "name": "@typescript-eslint/prefer-for-of",
+      "description": "Enforce the use of `for-of` loop over the standard `for` loop where possible",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://typescript-eslint.io/rules/prefer-for-of"
+      ]
+    },
+    {
+      "name": "@typescript-eslint/prefer-function-type",
+      "description": "Enforce using function types instead of interfaces with call signatures",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "TypeScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://typescript-eslint.io/rules/prefer-function-type"
+      ]
+    },
+    {
+      "name": "@typescript-eslint/prefer-includes",
+      "description": "Enforce `includes` method over `indexOf` method",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "TypeScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://typescript-eslint.io/rules/prefer-includes"
+      ]
+    },
+    {
+      "name": "@typescript-eslint/prefer-literal-enum-member",
+      "description": "Require all enum members to be literal values",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://typescript-eslint.io/rules/prefer-literal-enum-member"
+      ]
+    },
+    {
+      "name": "@typescript-eslint/prefer-namespace-keyword",
+      "description": "Require using `namespace` keyword over `module` keyword to declare custom TypeScript modules",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "BestPractices",
+        "TypeScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://typescript-eslint.io/rules/prefer-namespace-keyword"
+      ]
+    },
+    {
+      "name": "@typescript-eslint/prefer-nullish-coalescing",
+      "description": "Enforce using the nullish coalescing operator instead of logical assignments or chaining",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://typescript-eslint.io/rules/prefer-nullish-coalescing"
+      ]
+    },
+    {
+      "name": "@typescript-eslint/prefer-optional-chain",
+      "description": "Enforce using concise optional chain expressions instead of chained logical ands, negated logical ors, or empty objects",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "TypeScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://typescript-eslint.io/rules/prefer-optional-chain"
+      ]
+    },
+    {
+      "name": "@typescript-eslint/prefer-promise-reject-errors",
+      "description": "Require using Error objects as Promise rejection reasons",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://typescript-eslint.io/rules/prefer-promise-reject-errors"
+      ]
+    },
+    {
+      "name": "@typescript-eslint/prefer-readonly",
+      "description": "Require private members to be marked as `readonly` if they're never modified outside of the constructor",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "TypeScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://typescript-eslint.io/rules/prefer-readonly"
+      ]
+    },
+    {
+      "name": "@typescript-eslint/prefer-readonly-parameter-types",
+      "description": "Require function parameters to be typed as `readonly` to prevent accidental mutation of inputs",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://typescript-eslint.io/rules/prefer-readonly-parameter-types"
+      ]
+    },
+    {
+      "name": "@typescript-eslint/prefer-regexp-exec",
+      "description": "Enforce `RegExp#exec` over `String#match` if no global flag is provided",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "TypeScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://typescript-eslint.io/rules/prefer-regexp-exec"
+      ]
+    },
+    {
+      "name": "@typescript-eslint/prefer-return-this-type",
+      "description": "Enforce that `this` is used when only `this` type is returned",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "TypeScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://typescript-eslint.io/rules/prefer-return-this-type"
+      ]
+    },
+    {
+      "name": "@typescript-eslint/prefer-string-starts-ends-with",
+      "description": "Enforce using `String#startsWith` and `String#endsWith` over other equivalent methods of checking substrings",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "TypeScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://typescript-eslint.io/rules/prefer-string-starts-ends-with"
+      ]
+    },
+    {
+      "name": "@typescript-eslint/promise-function-async",
+      "description": "Require any function or method that returns a Promise to be marked async",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "TypeScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://typescript-eslint.io/rules/promise-function-async"
+      ]
+    },
+    {
+      "name": "@typescript-eslint/require-await",
+      "description": "Disallow async functions which do not return promises and have no `await` expression",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://typescript-eslint.io/rules/require-await"
+      ]
+    },
+    {
+      "name": "@typescript-eslint/strict-boolean-expressions",
+      "description": "Disallow certain types in boolean expressions",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://typescript-eslint.io/rules/strict-boolean-expressions"
+      ]
+    },
+    {
+      "name": "@typescript-eslint/switch-exhaustiveness-check",
+      "description": "Require switch-case statements to be exhaustive",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://typescript-eslint.io/rules/switch-exhaustiveness-check"
+      ]
+    },
+    {
+      "name": "@typescript-eslint/triple-slash-reference",
+      "description": "Disallow certain triple slash directives in favor of ES6-style import declarations",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "BestPractices",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://typescript-eslint.io/rules/triple-slash-reference"
+      ]
+    },
+    {
+      "name": "@typescript-eslint/unified-signatures",
+      "description": "Disallow two overloads that could be unified into one with a union or an optional/rest parameter",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://typescript-eslint.io/rules/unified-signatures"
+      ]
+    },
+    {
+      "name": "@typescript-eslint/use-unknown-in-catch-callback-variable",
+      "description": "Enforce typing arguments in Promise rejection callbacks as `unknown`",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://typescript-eslint.io/rules/use-unknown-in-catch-callback-variable"
+      ]
+    },
+    {
+      "name": "accessor-pairs",
+      "description": "Enforce getter and setter pairs in objects and classes",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/accessor-pairs"
+      ]
+    },
+    {
+      "name": "arrow-body-style",
+      "description": "Require braces around arrow function bodies",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/arrow-body-style"
+      ]
+    },
+    {
+      "name": "block-scoped-var",
+      "description": "Enforce the use of variables within the scope they are defined",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/block-scoped-var"
+      ]
+    },
+    {
+      "name": "camelcase",
+      "description": "Enforce camelcase naming convention",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/camelcase"
+      ]
+    },
+    {
+      "name": "capitalized-comments",
+      "description": "Enforce or disallow capitalization of the first letter of a comment",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/capitalized-comments"
+      ]
+    },
+    {
+      "name": "class-methods-use-this",
+      "description": "Enforce that class methods utilize `this`",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/class-methods-use-this"
+      ]
+    },
+    {
+      "name": "complexity",
+      "description": "Enforce a maximum cyclomatic complexity allowed in a program",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/complexity"
+      ]
+    },
+    {
+      "name": "consistent-return",
+      "description": "Require `return` statements to either always or never specify values",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/consistent-return"
+      ]
+    },
+    {
+      "name": "consistent-this",
+      "description": "Enforce consistent naming when capturing the current execution context",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/consistent-this"
+      ]
+    },
+    {
+      "name": "curly",
+      "description": "Enforce consistent brace style for all control statements",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/curly"
+      ]
+    },
+    {
+      "name": "default-case",
+      "description": "Require `default` cases in `switch` statements",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/default-case"
+      ]
+    },
+    {
+      "name": "default-case-last",
+      "description": "Enforce `default` clauses in `switch` statements to be last",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/default-case-last"
+      ]
+    },
+    {
+      "name": "default-param-last",
+      "description": "Enforce default parameters to be last",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/default-param-last"
+      ]
+    },
+    {
+      "name": "dot-notation",
+      "description": "Enforce dot notation whenever possible",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/dot-notation"
+      ]
+    },
+    {
+      "name": "eqeqeq",
+      "description": "Require the use of `===` and `!==`",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/eqeqeq"
+      ]
+    },
+    {
+      "name": "func-name-matching",
+      "description": "Require function names to match the name of the variable or property to which they are assigned",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/func-name-matching"
+      ]
+    },
+    {
+      "name": "func-names",
+      "description": "Require or disallow named `function` expressions",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/func-names"
+      ]
+    },
+    {
+      "name": "func-style",
+      "description": "Enforce the consistent use of either `function` declarations or expressions assigned to variables",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/func-style"
+      ]
+    },
+    {
+      "name": "grouped-accessor-pairs",
+      "description": "Require grouped accessor pairs in object literals and classes",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/grouped-accessor-pairs"
+      ]
+    },
+    {
+      "name": "guard-for-in",
+      "description": "Require `for-in` loops to include an `if` statement",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/guard-for-in"
+      ]
+    },
+    {
+      "name": "id-denylist",
+      "description": "Disallow specified identifiers",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/id-denylist"
+      ]
+    },
+    {
+      "name": "id-length",
+      "description": "Enforce minimum and maximum identifier lengths",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/id-length"
+      ]
+    },
+    {
+      "name": "id-match",
+      "description": "Require identifiers to match a specified regular expression",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/id-match"
+      ]
+    },
+    {
+      "name": "init-declarations",
+      "description": "Require or disallow initialization in variable declarations",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/init-declarations"
+      ]
+    },
+    {
+      "name": "jest/expect-expect",
+      "description": "Enforce assertion to be made in a test body",
+      "engine": "eslint",
+      "severity": 5,
+      "tags": [
+        "Recommended",
+        "LWC",
+        "BestPractices",
+        "JavaScript"
+      ],
+      "resources": [
+        "https://github.com/jest-community/eslint-plugin-jest/blob/v29.16.0/docs/rules/expect-expect.md"
+      ]
+    },
+    {
+      "name": "jest/no-alias-methods",
+      "description": "Disallow alias methods",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "LWC",
+        "BestPractices",
+        "JavaScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://github.com/jest-community/eslint-plugin-jest/blob/v29.16.0/docs/rules/no-alias-methods.md"
+      ]
+    },
+    {
+      "name": "jest/no-commented-out-tests",
+      "description": "Disallow commented out tests",
+      "engine": "eslint",
+      "severity": 5,
+      "tags": [
+        "Recommended",
+        "LWC",
+        "BestPractices",
+        "JavaScript"
+      ],
+      "resources": [
+        "https://github.com/jest-community/eslint-plugin-jest/blob/v29.16.0/docs/rules/no-commented-out-tests.md"
+      ]
+    },
+    {
+      "name": "jest/no-disabled-tests",
+      "description": "Disallow disabled tests",
+      "engine": "eslint",
+      "severity": 5,
+      "tags": [
+        "Recommended",
+        "LWC",
+        "BestPractices",
+        "JavaScript"
+      ],
+      "resources": [
+        "https://github.com/jest-community/eslint-plugin-jest/blob/v29.16.0/docs/rules/no-disabled-tests.md"
+      ]
+    },
+    {
+      "name": "jest/no-done-callback",
+      "description": "Disallow using a callback in asynchronous tests and hooks",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "LWC",
+        "BestPractices",
+        "JavaScript"
+      ],
+      "resources": [
+        "https://github.com/jest-community/eslint-plugin-jest/blob/v29.16.0/docs/rules/no-done-callback.md"
+      ]
+    },
+    {
+      "name": "jest/no-export",
+      "description": "Disallow using `exports` in files containing tests",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "LWC",
+        "BestPractices",
+        "JavaScript"
+      ],
+      "resources": [
+        "https://github.com/jest-community/eslint-plugin-jest/blob/v29.16.0/docs/rules/no-export.md"
+      ]
+    },
+    {
+      "name": "jest/no-focused-tests",
+      "description": "Disallow focused tests",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "LWC",
+        "BestPractices",
+        "JavaScript"
+      ],
+      "resources": [
+        "https://github.com/jest-community/eslint-plugin-jest/blob/v29.16.0/docs/rules/no-focused-tests.md"
+      ]
+    },
+    {
+      "name": "jest/no-identical-title",
+      "description": "Disallow identical titles",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "LWC",
+        "BestPractices",
+        "JavaScript"
+      ],
+      "resources": [
+        "https://github.com/jest-community/eslint-plugin-jest/blob/v29.16.0/docs/rules/no-identical-title.md"
+      ]
+    },
+    {
+      "name": "jest/no-jasmine-globals",
+      "description": "Disallow Jasmine globals",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "LWC",
+        "BestPractices",
+        "JavaScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://github.com/jest-community/eslint-plugin-jest/blob/v29.16.0/docs/rules/no-jasmine-globals.md"
+      ]
+    },
+    {
+      "name": "jest/no-standalone-expect",
+      "description": "Disallow using `expect` outside of `it` or `test` blocks",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "LWC",
+        "BestPractices",
+        "JavaScript"
+      ],
+      "resources": [
+        "https://github.com/jest-community/eslint-plugin-jest/blob/v29.16.0/docs/rules/no-standalone-expect.md"
+      ]
+    },
+    {
+      "name": "jest/no-test-prefixes",
+      "description": "Require using `.only` and `.skip` over `f` and `x`",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "LWC",
+        "BestPractices",
+        "JavaScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://github.com/jest-community/eslint-plugin-jest/blob/v29.16.0/docs/rules/no-test-prefixes.md"
+      ]
+    },
+    {
+      "name": "jest/valid-expect",
+      "description": "Enforce valid `expect()` usage",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "LWC",
+        "BestPractices",
+        "JavaScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://github.com/jest-community/eslint-plugin-jest/blob/v29.16.0/docs/rules/valid-expect.md"
+      ]
+    },
+    {
+      "name": "jest/valid-expect-in-promise",
+      "description": "Require promises that have expectations in their chain to be valid",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "LWC",
+        "BestPractices",
+        "JavaScript"
+      ],
+      "resources": [
+        "https://github.com/jest-community/eslint-plugin-jest/blob/v29.16.0/docs/rules/valid-expect-in-promise.md"
+      ]
+    },
+    {
+      "name": "jest/valid-title",
+      "description": "Enforce valid titles",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "LWC",
+        "BestPractices",
+        "JavaScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://github.com/jest-community/eslint-plugin-jest/blob/v29.16.0/docs/rules/valid-title.md"
+      ]
+    },
+    {
+      "name": "jsx-a11y/alt-text",
+      "description": "Enforce all elements that require alternative text have meaningful information to relay back to end user.",
+      "engine": "eslint",
+      "severity": 2,
+      "tags": [
+        "Recommended",
+        "A11y",
+        "React",
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/alt-text.md"
+      ]
+    },
+    {
+      "name": "jsx-a11y/anchor-has-content",
+      "description": "Enforce all anchors to contain accessible content.",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "A11y",
+        "React",
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/anchor-has-content.md"
+      ]
+    },
+    {
+      "name": "jsx-a11y/anchor-is-valid",
+      "description": "Enforce all anchors are valid, navigable elements.",
+      "engine": "eslint",
+      "severity": 2,
+      "tags": [
+        "Recommended",
+        "A11y",
+        "React",
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/anchor-is-valid.md"
+      ]
+    },
+    {
+      "name": "jsx-a11y/aria-activedescendant-has-tabindex",
+      "description": "Enforce elements with aria-activedescendant are tabbable.",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "A11y",
+        "React",
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/aria-activedescendant-has-tabindex.md"
+      ]
+    },
+    {
+      "name": "jsx-a11y/aria-props",
+      "description": "Enforce all `aria-*` props are valid.",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "A11y",
+        "React",
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/aria-props.md"
+      ]
+    },
+    {
+      "name": "jsx-a11y/aria-proptypes",
+      "description": "Enforce ARIA state and property values are valid.",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "A11y",
+        "React",
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/aria-proptypes.md"
+      ]
+    },
+    {
+      "name": "jsx-a11y/aria-role",
+      "description": "Enforce that elements with ARIA roles must use a valid, non-abstract ARIA role.",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "A11y",
+        "React",
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/aria-role.md"
+      ]
+    },
+    {
+      "name": "jsx-a11y/aria-unsupported-elements",
+      "description": "Enforce that elements that do not support ARIA roles, states, and properties do not have those attributes.",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "A11y",
+        "React",
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/aria-unsupported-elements.md"
+      ]
+    },
+    {
+      "name": "jsx-a11y/autocomplete-valid",
+      "description": "Enforce that autocomplete attributes are used correctly.",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "A11y",
+        "React",
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/autocomplete-valid.md"
+      ]
+    },
+    {
+      "name": "jsx-a11y/click-events-have-key-events",
+      "description": "Enforce a clickable non-interactive element has at least one keyboard event listener.",
+      "engine": "eslint",
+      "severity": 2,
+      "tags": [
+        "Recommended",
+        "A11y",
+        "React",
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/click-events-have-key-events.md"
+      ]
+    },
+    {
+      "name": "jsx-a11y/heading-has-content",
+      "description": "Enforce heading (`h1`, `h2`, etc) elements contain accessible content.",
+      "engine": "eslint",
+      "severity": 2,
+      "tags": [
+        "Recommended",
+        "A11y",
+        "React",
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/heading-has-content.md"
+      ]
+    },
+    {
+      "name": "jsx-a11y/html-has-lang",
+      "description": "Enforce `<html>` element has `lang` prop.",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "A11y",
+        "React",
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/html-has-lang.md"
+      ]
+    },
+    {
+      "name": "jsx-a11y/iframe-has-title",
+      "description": "Enforce iframe elements have a title attribute.",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "A11y",
+        "React",
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/iframe-has-title.md"
+      ]
+    },
+    {
+      "name": "jsx-a11y/img-redundant-alt",
+      "description": "Enforce `<img>` alt prop does not contain the word \"image\", \"picture\", or \"photo\".",
+      "engine": "eslint",
+      "severity": 2,
+      "tags": [
+        "Recommended",
+        "A11y",
+        "React",
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/img-redundant-alt.md"
+      ]
+    },
+    {
+      "name": "jsx-a11y/interactive-supports-focus",
+      "description": "Enforce that elements with interactive handlers like `onClick` must be focusable.",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "A11y",
+        "React",
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/interactive-supports-focus.md"
+      ]
+    },
+    {
+      "name": "jsx-a11y/label-has-associated-control",
+      "description": "Enforce that a `label` tag has a text label and an associated control.",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "A11y",
+        "React",
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/main/docs/rules/label-has-associated-control.md"
+      ]
+    },
+    {
+      "name": "jsx-a11y/media-has-caption",
+      "description": "Enforces that `<audio>` and `<video>` elements must have a `<track>` for captions.",
+      "engine": "eslint",
+      "severity": 2,
+      "tags": [
+        "Recommended",
+        "A11y",
+        "React",
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/media-has-caption.md"
+      ]
+    },
+    {
+      "name": "jsx-a11y/mouse-events-have-key-events",
+      "description": "Enforce that `onMouseOver`/`onMouseOut` are accompanied by `onFocus`/`onBlur` for keyboard-only users.",
+      "engine": "eslint",
+      "severity": 2,
+      "tags": [
+        "Recommended",
+        "A11y",
+        "React",
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/mouse-events-have-key-events.md"
+      ]
+    },
+    {
+      "name": "jsx-a11y/no-access-key",
+      "description": "Enforce that the `accessKey` prop is not used on any element to avoid complications with keyboard commands used by a screen reader.",
+      "engine": "eslint",
+      "severity": 2,
+      "tags": [
+        "Recommended",
+        "A11y",
+        "React",
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/no-access-key.md"
+      ]
+    },
+    {
+      "name": "jsx-a11y/no-autofocus",
+      "description": "Enforce autoFocus prop is not used.",
+      "engine": "eslint",
+      "severity": 2,
+      "tags": [
+        "Recommended",
+        "A11y",
+        "React",
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/no-autofocus.md"
+      ]
+    },
+    {
+      "name": "jsx-a11y/no-distracting-elements",
+      "description": "Enforce distracting elements are not used.",
+      "engine": "eslint",
+      "severity": 2,
+      "tags": [
+        "Recommended",
+        "A11y",
+        "React",
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/no-distracting-elements.md"
+      ]
+    },
+    {
+      "name": "jsx-a11y/no-interactive-element-to-noninteractive-role",
+      "description": "Interactive elements should not be assigned non-interactive roles.",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "A11y",
+        "React",
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/no-interactive-element-to-noninteractive-role.md"
+      ]
+    },
+    {
+      "name": "jsx-a11y/no-noninteractive-element-interactions",
+      "description": "Non-interactive elements should not be assigned mouse or keyboard event listeners.",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "A11y",
+        "React",
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/no-noninteractive-element-interactions.md"
+      ]
+    },
+    {
+      "name": "jsx-a11y/no-noninteractive-element-to-interactive-role",
+      "description": "Non-interactive elements should not be assigned interactive roles.",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "A11y",
+        "React",
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/no-noninteractive-element-to-interactive-role.md"
+      ]
+    },
+    {
+      "name": "jsx-a11y/no-noninteractive-tabindex",
+      "description": "`tabIndex` should only be declared on interactive elements.",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "A11y",
+        "React",
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/no-noninteractive-tabindex.md"
+      ]
+    },
+    {
+      "name": "jsx-a11y/no-redundant-roles",
+      "description": "Enforce explicit role property is not the same as implicit/default role property on element.",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "A11y",
+        "React",
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/no-redundant-roles.md"
+      ]
+    },
+    {
+      "name": "jsx-a11y/no-static-element-interactions",
+      "description": "Enforce that non-interactive, visible elements (such as `<div>`) that have click handlers use the role attribute.",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "A11y",
+        "React",
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/no-static-element-interactions.md"
+      ]
+    },
+    {
+      "name": "jsx-a11y/role-has-required-aria-props",
+      "description": "Enforce that elements with ARIA roles must have all required attributes for that role.",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "A11y",
+        "React",
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/role-has-required-aria-props.md"
+      ]
+    },
+    {
+      "name": "jsx-a11y/role-supports-aria-props",
+      "description": "Enforce that elements with explicit or implicit roles defined contain only `aria-*` properties supported by that `role`.",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "A11y",
+        "React",
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/role-supports-aria-props.md"
+      ]
+    },
+    {
+      "name": "jsx-a11y/scope",
+      "description": "Enforce `scope` prop is only used on `<th>` elements.",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "A11y",
+        "React",
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/scope.md"
+      ]
+    },
+    {
+      "name": "jsx-a11y/tabindex-no-positive",
+      "description": "Enforce `tabIndex` value is not greater than zero.",
+      "engine": "eslint",
+      "severity": 2,
+      "tags": [
+        "Recommended",
+        "A11y",
+        "React",
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/tabindex-no-positive.md"
+      ]
+    },
+    {
+      "name": "logical-assignment-operators",
+      "description": "Require or disallow logical assignment operator shorthand",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/logical-assignment-operators"
+      ]
+    },
+    {
+      "name": "max-classes-per-file",
+      "description": "Enforce a maximum number of classes per file",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/max-classes-per-file"
+      ]
+    },
+    {
+      "name": "max-depth",
+      "description": "Enforce a maximum depth that blocks can be nested",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/max-depth"
+      ]
+    },
+    {
+      "name": "max-lines",
+      "description": "Enforce a maximum number of lines per file",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/max-lines"
+      ]
+    },
+    {
+      "name": "max-lines-per-function",
+      "description": "Enforce a maximum number of lines of code in a function",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/max-lines-per-function"
+      ]
+    },
+    {
+      "name": "max-nested-callbacks",
+      "description": "Enforce a maximum depth that callbacks can be nested",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/max-nested-callbacks"
+      ]
+    },
+    {
+      "name": "max-params",
+      "description": "Enforce a maximum number of parameters in function definitions",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/max-params"
+      ]
+    },
+    {
+      "name": "max-statements",
+      "description": "Enforce a maximum number of statements allowed in function blocks",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/max-statements"
+      ]
+    },
+    {
+      "name": "new-cap",
+      "description": "Require constructor names to begin with a capital letter",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/new-cap"
+      ]
+    },
+    {
+      "name": "no-alert",
+      "description": "Disallow the use of `alert`, `confirm`, and `prompt`",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/no-alert"
+      ]
+    },
+    {
+      "name": "no-array-constructor",
+      "description": "Disallow `Array` constructors",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/no-array-constructor"
+      ]
+    },
+    {
+      "name": "no-bitwise",
+      "description": "Disallow bitwise operators",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/no-bitwise"
+      ]
+    },
+    {
+      "name": "no-caller",
+      "description": "Disallow the use of `arguments.caller` or `arguments.callee`",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/no-caller"
+      ]
+    },
+    {
+      "name": "no-case-declarations",
+      "description": "Disallow lexical declarations in case clauses",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/no-case-declarations"
+      ]
+    },
+    {
+      "name": "no-console",
+      "description": "Disallow the use of `console`",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/no-console"
+      ]
+    },
+    {
+      "name": "no-continue",
+      "description": "Disallow `continue` statements",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/no-continue"
+      ]
+    },
+    {
+      "name": "no-delete-var",
+      "description": "Disallow deleting variables",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/no-delete-var"
+      ]
+    },
+    {
+      "name": "no-div-regex",
+      "description": "Disallow equal signs explicitly at the beginning of regular expressions",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/no-div-regex"
+      ]
+    },
+    {
+      "name": "no-else-return",
+      "description": "Disallow `else` blocks after `return` statements in `if` statements",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/no-else-return"
+      ]
+    },
+    {
+      "name": "no-empty",
+      "description": "Disallow empty block statements",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/no-empty"
+      ]
+    },
+    {
+      "name": "no-empty-function",
+      "description": "Disallow empty functions",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/no-empty-function"
+      ]
+    },
+    {
+      "name": "no-empty-static-block",
+      "description": "Disallow empty static blocks",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/no-empty-static-block"
+      ]
+    },
+    {
+      "name": "no-eq-null",
+      "description": "Disallow `null` comparisons without type-checking operators",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/no-eq-null"
+      ]
+    },
+    {
+      "name": "no-eval",
+      "description": "Disallow the use of `eval()`",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/no-eval"
+      ]
+    },
+    {
+      "name": "no-extend-native",
+      "description": "Disallow extending native types",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/no-extend-native"
+      ]
+    },
+    {
+      "name": "no-extra-bind",
+      "description": "Disallow unnecessary calls to `.bind()`",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/no-extra-bind"
+      ]
+    },
+    {
+      "name": "no-extra-boolean-cast",
+      "description": "Disallow unnecessary boolean casts",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "BestPractices",
+        "JavaScript",
+        "TypeScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/no-extra-boolean-cast"
+      ]
+    },
+    {
+      "name": "no-extra-label",
+      "description": "Disallow unnecessary labels",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/no-extra-label"
+      ]
+    },
+    {
+      "name": "no-global-assign",
+      "description": "Disallow assignments to native objects or read-only global variables",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/no-global-assign"
+      ]
+    },
+    {
+      "name": "no-implicit-coercion",
+      "description": "Disallow shorthand type conversions",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/no-implicit-coercion"
+      ]
+    },
+    {
+      "name": "no-implicit-globals",
+      "description": "Disallow declarations in the global scope",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/no-implicit-globals"
+      ]
+    },
+    {
+      "name": "no-implied-eval",
+      "description": "Disallow the use of `eval()`-like methods",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/no-implied-eval"
+      ]
+    },
+    {
+      "name": "no-inline-comments",
+      "description": "Disallow inline comments after code",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/no-inline-comments"
+      ]
+    },
+    {
+      "name": "no-invalid-this",
+      "description": "Disallow use of `this` in contexts where the value of `this` is `undefined`",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/no-invalid-this"
+      ]
+    },
+    {
+      "name": "no-iterator",
+      "description": "Disallow the use of the `__iterator__` property",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/no-iterator"
+      ]
+    },
+    {
+      "name": "no-label-var",
+      "description": "Disallow labels that share a name with a variable",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/no-label-var"
+      ]
+    },
+    {
+      "name": "no-labels",
+      "description": "Disallow labeled statements",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/no-labels"
+      ]
+    },
+    {
+      "name": "no-lone-blocks",
+      "description": "Disallow unnecessary nested blocks",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/no-lone-blocks"
+      ]
+    },
+    {
+      "name": "no-lonely-if",
+      "description": "Disallow `if` statements as the only statement in `else` blocks",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/no-lonely-if"
+      ]
+    },
+    {
+      "name": "no-loop-func",
+      "description": "Disallow function declarations that contain unsafe references inside loop statements",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/no-loop-func"
+      ]
+    },
+    {
+      "name": "no-magic-numbers",
+      "description": "Disallow magic numbers",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/no-magic-numbers"
+      ]
+    },
+    {
+      "name": "no-multi-assign",
+      "description": "Disallow use of chained assignment expressions",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/no-multi-assign"
+      ]
+    },
+    {
+      "name": "no-multi-str",
+      "description": "Disallow multiline strings",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/no-multi-str"
+      ]
+    },
+    {
+      "name": "no-negated-condition",
+      "description": "Disallow negated conditions",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/no-negated-condition"
+      ]
+    },
+    {
+      "name": "no-nested-ternary",
+      "description": "Disallow nested ternary expressions",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/no-nested-ternary"
+      ]
+    },
+    {
+      "name": "no-new",
+      "description": "Disallow `new` operators outside of assignments or comparisons",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/no-new"
+      ]
+    },
+    {
+      "name": "no-new-func",
+      "description": "Disallow `new` operators with the `Function` object",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/no-new-func"
+      ]
+    },
+    {
+      "name": "no-new-wrappers",
+      "description": "Disallow `new` operators with the `String`, `Number`, and `Boolean` objects",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/no-new-wrappers"
+      ]
+    },
+    {
+      "name": "no-nonoctal-decimal-escape",
+      "description": "Disallow `\\8` and `\\9` escape sequences in string literals",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/no-nonoctal-decimal-escape"
+      ]
+    },
+    {
+      "name": "no-object-constructor",
+      "description": "Disallow calls to the `Object` constructor without an argument",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/no-object-constructor"
+      ]
+    },
+    {
+      "name": "no-octal-escape",
+      "description": "Disallow octal escape sequences in string literals",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/no-octal-escape"
+      ]
+    },
+    {
+      "name": "no-param-reassign",
+      "description": "Disallow reassigning function parameters",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/no-param-reassign"
+      ]
+    },
+    {
+      "name": "no-plusplus",
+      "description": "Disallow the unary operators `++` and `--`",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/no-plusplus"
+      ]
+    },
+    {
+      "name": "no-proto",
+      "description": "Disallow the use of the `__proto__` property",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/no-proto"
+      ]
+    },
+    {
+      "name": "no-redeclare",
+      "description": "Disallow variable redeclaration",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "BestPractices",
+        "JavaScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/no-redeclare"
+      ]
+    },
+    {
+      "name": "no-regex-spaces",
+      "description": "Disallow multiple spaces in regular expressions",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "BestPractices",
+        "JavaScript",
+        "TypeScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/no-regex-spaces"
+      ]
+    },
+    {
+      "name": "no-restricted-exports",
+      "description": "Disallow specified names in exports",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/no-restricted-exports"
+      ]
+    },
+    {
+      "name": "no-restricted-globals",
+      "description": "Disallow specified global variables",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/no-restricted-globals"
+      ]
+    },
+    {
+      "name": "no-restricted-imports",
+      "description": "Disallow specified modules when loaded by `import`",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/no-restricted-imports"
+      ]
+    },
+    {
+      "name": "no-restricted-properties",
+      "description": "Disallow certain properties on certain objects",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/no-restricted-properties"
+      ]
+    },
+    {
+      "name": "no-restricted-syntax",
+      "description": "Disallow specified syntax",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/no-restricted-syntax"
+      ]
+    },
+    {
+      "name": "no-return-assign",
+      "description": "Disallow assignment operators in `return` statements",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/no-return-assign"
+      ]
+    },
+    {
+      "name": "no-script-url",
+      "description": "Disallow `javascript:` URLs",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/no-script-url"
+      ]
+    },
+    {
+      "name": "no-sequences",
+      "description": "Disallow comma operators",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/no-sequences"
+      ]
+    },
+    {
+      "name": "no-shadow",
+      "description": "Disallow variable declarations from shadowing variables declared in the outer scope",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/no-shadow"
+      ]
+    },
+    {
+      "name": "no-shadow-restricted-names",
+      "description": "Disallow identifiers from shadowing restricted names",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/no-shadow-restricted-names"
+      ]
+    },
+    {
+      "name": "no-ternary",
+      "description": "Disallow ternary operators",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/no-ternary"
+      ]
+    },
+    {
+      "name": "no-throw-literal",
+      "description": "Disallow throwing literals as exceptions",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/no-throw-literal"
+      ]
+    },
+    {
+      "name": "no-undef-init",
+      "description": "Disallow initializing variables to `undefined`",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/no-undef-init"
+      ]
+    },
+    {
+      "name": "no-undefined",
+      "description": "Disallow the use of `undefined` as an identifier",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/no-undefined"
+      ]
+    },
+    {
+      "name": "no-underscore-dangle",
+      "description": "Disallow dangling underscores in identifiers",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/no-underscore-dangle"
+      ]
+    },
+    {
+      "name": "no-unneeded-ternary",
+      "description": "Disallow ternary operators when simpler alternatives exist",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/no-unneeded-ternary"
+      ]
+    },
+    {
+      "name": "no-unused-expressions",
+      "description": "Disallow unused expressions",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/no-unused-expressions"
+      ]
+    },
+    {
+      "name": "no-unused-labels",
+      "description": "Disallow unused labels",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "BestPractices",
+        "JavaScript",
+        "TypeScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/no-unused-labels"
+      ]
+    },
+    {
+      "name": "no-useless-call",
+      "description": "Disallow unnecessary calls to `.call()` and `.apply()`",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/no-useless-call"
+      ]
+    },
+    {
+      "name": "no-useless-catch",
+      "description": "Disallow unnecessary `catch` clauses",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/no-useless-catch"
+      ]
+    },
+    {
+      "name": "no-useless-computed-key",
+      "description": "Disallow unnecessary computed property keys in objects and classes",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/no-useless-computed-key"
+      ]
+    },
+    {
+      "name": "no-useless-concat",
+      "description": "Disallow unnecessary concatenation of literals or template literals",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/no-useless-concat"
+      ]
+    },
+    {
+      "name": "no-useless-constructor",
+      "description": "Disallow unnecessary constructors",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/no-useless-constructor"
+      ]
+    },
+    {
+      "name": "no-useless-escape",
+      "description": "Disallow unnecessary escape characters",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/no-useless-escape"
+      ]
+    },
+    {
+      "name": "no-useless-rename",
+      "description": "Disallow renaming import, export, and destructured assignments to the same name",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/no-useless-rename"
+      ]
+    },
+    {
+      "name": "no-useless-return",
+      "description": "Disallow redundant return statements",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/no-useless-return"
+      ]
+    },
+    {
+      "name": "no-var",
+      "description": "Require `let` or `const` instead of `var`",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "BestPractices",
+        "JavaScript",
+        "TypeScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/no-var"
+      ]
+    },
+    {
+      "name": "no-void",
+      "description": "Disallow `void` operators",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/no-void"
+      ]
+    },
+    {
+      "name": "no-warning-comments",
+      "description": "Disallow specified warning terms in comments",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/no-warning-comments"
+      ]
+    },
+    {
+      "name": "no-with",
+      "description": "Disallow `with` statements",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "BestPractices",
+        "JavaScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/no-with"
+      ]
+    },
+    {
+      "name": "object-shorthand",
+      "description": "Require or disallow method and property shorthand syntax for object literals",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/object-shorthand"
+      ]
+    },
+    {
+      "name": "one-var",
+      "description": "Enforce variables to be declared either together or separately in functions",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/one-var"
+      ]
+    },
+    {
+      "name": "operator-assignment",
+      "description": "Require or disallow assignment operator shorthand where possible",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/operator-assignment"
+      ]
+    },
+    {
+      "name": "prefer-arrow-callback",
+      "description": "Require using arrow functions for callbacks",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/prefer-arrow-callback"
+      ]
+    },
+    {
+      "name": "prefer-const",
+      "description": "Require `const` declarations for variables that are never reassigned after declared",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "BestPractices",
+        "JavaScript",
+        "TypeScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/prefer-const"
+      ]
+    },
+    {
+      "name": "prefer-destructuring",
+      "description": "Require destructuring from arrays and/or objects",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/prefer-destructuring"
+      ]
+    },
+    {
+      "name": "prefer-exponentiation-operator",
+      "description": "Disallow the use of `Math.pow` in favor of the `**` operator",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/prefer-exponentiation-operator"
+      ]
+    },
+    {
+      "name": "prefer-named-capture-group",
+      "description": "Enforce using named capture group in regular expression",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/prefer-named-capture-group"
+      ]
+    },
+    {
+      "name": "prefer-numeric-literals",
+      "description": "Disallow `parseInt()` and `Number.parseInt()` in favor of binary, octal, and hexadecimal literals",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/prefer-numeric-literals"
+      ]
+    },
+    {
+      "name": "prefer-object-has-own",
+      "description": "Disallow use of `Object.prototype.hasOwnProperty.call()` and prefer use of `Object.hasOwn()`",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/prefer-object-has-own"
+      ]
+    },
+    {
+      "name": "prefer-object-spread",
+      "description": "Disallow using `Object.assign` with an object literal as the first argument and prefer the use of object spread instead",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/prefer-object-spread"
+      ]
+    },
+    {
+      "name": "prefer-promise-reject-errors",
+      "description": "Require using Error objects as Promise rejection reasons",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/prefer-promise-reject-errors"
+      ]
+    },
+    {
+      "name": "prefer-regex-literals",
+      "description": "Disallow use of the `RegExp` constructor in favor of regular expression literals",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/prefer-regex-literals"
+      ]
+    },
+    {
+      "name": "prefer-rest-params",
+      "description": "Require rest parameters instead of `arguments`",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/prefer-rest-params"
+      ]
+    },
+    {
+      "name": "prefer-spread",
+      "description": "Require spread operators instead of `.apply()`",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/prefer-spread"
+      ]
+    },
+    {
+      "name": "prefer-template",
+      "description": "Require template literals instead of string concatenation",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/prefer-template"
+      ]
+    },
+    {
+      "name": "preserve-caught-error",
+      "description": "Disallow losing originally caught error when re-throwing custom errors",
+      "engine": "eslint",
+      "severity": 4,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/preserve-caught-error"
+      ]
+    },
+    {
+      "name": "radix",
+      "description": "Enforce the consistent use of the radix argument when using `parseInt()`",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/radix"
+      ]
+    },
+    {
+      "name": "react/checked-requires-onchange-or-readonly",
+      "description": "Enforce using `onChange` or `readonly` attribute when `checked` is used",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "React",
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://github.com/jsx-eslint/eslint-plugin-react/tree/master/docs/rules/checked-requires-onchange-or-readonly.md"
+      ]
+    },
+    {
+      "name": "react/display-name",
+      "description": "Disallow missing displayName in a React component definition",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "React",
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://github.com/jsx-eslint/eslint-plugin-react/tree/master/docs/rules/display-name.md"
+      ]
+    },
+    {
+      "name": "react/forbid-dom-props",
+      "description": "Disallow certain props on DOM Nodes",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "React",
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://github.com/jsx-eslint/eslint-plugin-react/tree/master/docs/rules/forbid-dom-props.md"
+      ]
+    },
+    {
+      "name": "react/jsx-filename-extension",
+      "description": "Disallow file extensions that may contain JSX",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "React",
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://github.com/jsx-eslint/eslint-plugin-react/tree/master/docs/rules/jsx-filename-extension.md"
+      ]
+    },
+    {
+      "name": "react/jsx-key",
+      "description": "Disallow missing `key` props in iterators/collection literals",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "React",
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://github.com/jsx-eslint/eslint-plugin-react/tree/master/docs/rules/jsx-key.md"
+      ]
+    },
+    {
+      "name": "react/jsx-uses-vars",
+      "description": "Disallow variables used in JSX to be incorrectly marked as unused",
+      "engine": "eslint",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "React",
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://github.com/jsx-eslint/eslint-plugin-react/tree/master/docs/rules/jsx-uses-vars.md"
+      ]
+    },
+    {
+      "name": "react/no-children-prop",
+      "description": "Disallow passing of children as props",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "React",
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://github.com/jsx-eslint/eslint-plugin-react/tree/master/docs/rules/no-children-prop.md"
+      ]
+    },
+    {
+      "name": "react/no-find-dom-node",
+      "description": "Disallow usage of findDOMNode",
+      "engine": "eslint",
+      "severity": 2,
+      "tags": [
+        "Recommended",
+        "React",
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://github.com/jsx-eslint/eslint-plugin-react/tree/master/docs/rules/no-find-dom-node.md"
+      ]
+    },
+    {
+      "name": "react/no-is-mounted",
+      "description": "Disallow usage of isMounted",
+      "engine": "eslint",
+      "severity": 2,
+      "tags": [
+        "Recommended",
+        "React",
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://github.com/jsx-eslint/eslint-plugin-react/tree/master/docs/rules/no-is-mounted.md"
+      ]
+    },
+    {
+      "name": "react/no-multi-comp",
+      "description": "Disallow multiple component definition per file",
+      "engine": "eslint",
+      "severity": 4,
+      "tags": [
+        "React",
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://github.com/jsx-eslint/eslint-plugin-react/tree/master/docs/rules/no-multi-comp.md"
+      ]
+    },
+    {
+      "name": "react/no-redundant-should-component-update",
+      "description": "Disallow usage of shouldComponentUpdate when extending React.PureComponent",
+      "engine": "eslint",
+      "severity": 4,
+      "tags": [
+        "React",
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://github.com/jsx-eslint/eslint-plugin-react/tree/master/docs/rules/no-redundant-should-component-update.md"
+      ]
+    },
+    {
+      "name": "react/no-render-return-value",
+      "description": "Disallow usage of the return value of ReactDOM.render",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "React",
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://github.com/jsx-eslint/eslint-plugin-react/tree/master/docs/rules/no-render-return-value.md"
+      ]
+    },
+    {
+      "name": "react/no-string-refs",
+      "description": "Disallow using string references",
+      "engine": "eslint",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "React",
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://github.com/jsx-eslint/eslint-plugin-react/tree/master/docs/rules/no-string-refs.md"
+      ]
+    },
+    {
+      "name": "react/prefer-es6-class",
+      "description": "Enforce ES5 or ES6 class for React Components",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "React",
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://github.com/jsx-eslint/eslint-plugin-react/tree/master/docs/rules/prefer-es6-class.md"
+      ]
+    },
+    {
+      "name": "react/prefer-read-only-props",
+      "description": "Enforce that props are read-only",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "React",
+        "BestPractices",
+        "JavaScript",
+        "TypeScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://github.com/jsx-eslint/eslint-plugin-react/tree/master/docs/rules/prefer-read-only-props.md"
+      ]
+    },
+    {
+      "name": "react/prefer-stateless-function",
+      "description": "Enforce stateless components to be written as a pure function",
+      "engine": "eslint",
+      "severity": 4,
+      "tags": [
+        "React",
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://github.com/jsx-eslint/eslint-plugin-react/tree/master/docs/rules/prefer-stateless-function.md"
+      ]
+    },
+    {
+      "name": "react/prop-types",
+      "description": "Disallow missing props validation in a React component definition",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "React",
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://github.com/jsx-eslint/eslint-plugin-react/tree/master/docs/rules/prop-types.md"
+      ]
+    },
+    {
+      "name": "react/style-prop-object",
+      "description": "Enforce style prop value is an object",
+      "engine": "eslint",
+      "severity": 4,
+      "tags": [
+        "React",
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://github.com/jsx-eslint/eslint-plugin-react/tree/master/docs/rules/style-prop-object.md"
+      ]
+    },
+    {
+      "name": "require-await",
+      "description": "Disallow async functions which have no `await` expression",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/require-await"
+      ]
+    },
+    {
+      "name": "require-unicode-regexp",
+      "description": "Enforce the use of `u` or `v` flag on regular expressions",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/require-unicode-regexp"
+      ]
+    },
+    {
+      "name": "require-yield",
+      "description": "Require generator functions to contain `yield`",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/require-yield"
+      ]
+    },
+    {
+      "name": "sort-imports",
+      "description": "Enforce sorted `import` declarations within modules",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/sort-imports"
+      ]
+    },
+    {
+      "name": "sort-keys",
+      "description": "Require object keys to be sorted",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/sort-keys"
+      ]
+    },
+    {
+      "name": "sort-vars",
+      "description": "Require variables within the same declaration block to be sorted",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/sort-vars"
+      ]
+    },
+    {
+      "name": "strict",
+      "description": "Require or disallow strict mode directives",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/strict"
+      ]
+    },
+    {
+      "name": "symbol-description",
+      "description": "Require symbol descriptions",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/symbol-description"
+      ]
+    },
+    {
+      "name": "vars-on-top",
+      "description": "Require `var` declarations be placed at the top of their containing scope",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/vars-on-top"
+      ]
+    },
+    {
+      "name": "yoda",
+      "description": "Require or disallow \"Yoda\" conditions",
+      "engine": "eslint",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript",
+        "TypeScript",
+        "Fixable"
+      ],
+      "resources": [
+        "https://eslint.org/docs/latest/rules/yoda"
+      ]
+    },
+    {
+      "name": "ApexAssertionsShouldIncludeMessage",
+      "description": "The second parameter of System.assert/third parameter of System.assertEquals/System.assertNotEquals is a message. Having a second/third parameter provides more information and makes it easier to debug the test failure and improves the readability of test output.",
+      "engine": "pmd",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "Apex"
+      ],
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_bestpractices.html#apexassertionsshouldincludemessage"
+      ]
+    },
+    {
+      "name": "ApexUnitTestClassShouldHaveAsserts",
+      "description": "Apex unit tests should include at least one assertion. This makes the tests more robust, and using assert with messages provide the developer a clearer idea of what the test does. Custom assert method invocation patterns can be specified using the 'additionalAssertMethodPattern' property if required.",
+      "engine": "pmd",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "BestPractices",
+        "Apex"
+      ],
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_bestpractices.html#apexunittestclassshouldhaveasserts"
+      ]
+    },
+    {
+      "name": "ApexUnitTestClassShouldHaveRunAs",
+      "description": "Apex unit tests should include at least one runAs method. This makes the tests more robust, and independent from the user running it.",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "BestPractices",
+        "Apex"
+      ],
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_bestpractices.html#apexunittestclassshouldhaverunas"
+      ]
+    },
+    {
+      "name": "ApexUnitTestMethodShouldHaveIsTestAnnotation",
+      "description": "Apex test methods should have `@isTest` annotation instead of the `testMethod` keyword, as `testMethod` is deprecated. Salesforce advises to use @isTest annotation for test classes and methods.",
+      "engine": "pmd",
+      "severity": 2,
+      "tags": [
+        "Recommended",
+        "BestPractices",
+        "Apex"
+      ],
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_bestpractices.html#apexunittestmethodshouldhaveistestannotation"
+      ]
+    },
+    {
+      "name": "ApexUnitTestShouldNotUseSeeAllDataTrue",
+      "description": "Apex unit tests should not use @isTest(seeAllData=true) because it opens up the existing database data for unexpected modification by tests.",
+      "engine": "pmd",
+      "severity": 2,
+      "tags": [
+        "Recommended",
+        "BestPractices",
+        "Apex"
+      ],
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_bestpractices.html#apexunittestshouldnotuseseealldatatrue"
+      ]
+    },
+    {
+      "name": "AvoidFutureAnnotation",
+      "description": "Usage of the `@Future` annotation should be limited. The `@Future` annotation is a legacy way to execute asynchronous Apex code, but it has several limitations: - Methods must be static - Only primitive data types, primitive arrays, or collections of primitive data types can be parameters - No way to monitor job status or handle failures - No support for chaining jobs Consider... Learn more: https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_bestpractices.html#avoidfutureannotation",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "BestPractices",
+        "Apex"
+      ],
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_bestpractices.html#avoidfutureannotation"
+      ]
+    },
+    {
+      "name": "AvoidGlobalModifier",
+      "description": "Global classes should be avoided (especially in managed packages) as they can never be deleted or changed in signature. Always check twice if something needs to be global. Many interfaces (e.g. Batch) required global modifiers in the past but don't require this anymore. Don't lock yourself in.",
+      "engine": "pmd",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "BestPractices",
+        "Apex"
+      ],
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_bestpractices.html#avoidglobalmodifier"
+      ]
+    },
+    {
+      "name": "AvoidInlineStyles",
+      "description": "Don't mix content and style. Use separate CSS-files for the style and introduce classes. This helps to reuse common styles.",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "BestPractices",
+        "HTML"
+      ],
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_html_bestpractices.html#avoidinlinestyles"
+      ]
+    },
+    {
+      "name": "AvoidLogicInTrigger",
+      "description": "As triggers do not allow methods like regular classes they are less flexible and suited to apply good encapsulation style. Therefore delegate the triggers work to a regular class (often called Trigger handler class). See more here: <https://developer.salesforce.com/page/Trigger_Frameworks_and_Apex_Trigger_Best_Practices>",
+      "engine": "pmd",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "BestPractices",
+        "Apex"
+      ],
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_bestpractices.html#avoidlogicintrigger"
+      ]
+    },
+    {
+      "name": "AvoidWithStatement",
+      "description": "Avoid using with - it's bad news",
+      "engine": "pmd",
+      "severity": 2,
+      "tags": [
+        "BestPractices",
+        "JavaScript"
+      ],
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_ecmascript_bestpractices.html#avoidwithstatement"
+      ]
+    },
+    {
+      "name": "ConsistentReturn",
+      "description": "ECMAScript does provide for return types on functions, and therefore there is no solid rule as to their usage. However, when a function does use returns they should all have a value, or all with no value. Mixed return usage is likely a bug, or at best poor style.",
+      "engine": "pmd",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "JavaScript"
+      ],
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_ecmascript_bestpractices.html#consistentreturn"
+      ]
+    },
+    {
+      "name": "DebugsShouldUseLoggingLevel",
+      "description": "The first parameter of System.debug, when using the signature with two parameters, is a LoggingLevel enum. Having the Logging Level specified provides a cleaner log, and improves readability of it.",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "BestPractices",
+        "Apex"
+      ],
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_bestpractices.html#debugsshoulduselogginglevel"
+      ]
+    },
+    {
+      "name": "GlobalVariable",
+      "description": "This rule helps to avoid using accidentally global variables by simply missing the \"var\" declaration. Global variables can lead to side-effects that are hard to debug.",
+      "engine": "pmd",
+      "severity": 2,
+      "tags": [
+        "BestPractices",
+        "JavaScript"
+      ],
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_ecmascript_bestpractices.html#globalvariable"
+      ]
+    },
+    {
+      "name": "MissingEncoding",
+      "description": "When the character encoding is missing from the XML declaration, the parser may produce garbled text. This is completely dependent on how the parser is set up and the content of the XML file, so it may be hard to reproduce. Providing an explicit encoding ensures accurate and consistent parsing.",
+      "engine": "pmd",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "XML"
+      ],
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_xml_bestpractices.html#missingencoding"
+      ]
+    },
+    {
+      "name": "QueueableWithoutFinalizer",
+      "description": "Detects when the Queueable interface is used but a Finalizer is not attached. It is best practice to call the `System.attachFinalizer(Finalizer f)` method within the `execute` method of a class which implements the `Queueable` interface. Without attaching a Finalizer, there is no way of designing error recovery actions should the Queueable action fail.",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Recommended",
+        "BestPractices",
+        "Apex"
+      ],
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_bestpractices.html#queueablewithoutfinalizer"
+      ]
+    },
+    {
+      "name": "ScopeForInVariable",
+      "description": "A for-in loop in which the variable name is not explicitly scoped to the enclosing scope with the 'var' keyword can refer to a variable in an enclosing scope outside the nearest enclosing scope. This will overwrite the existing value of the variable in the outer scope when the body of the for-in is evaluated. When the for-in loop has finished, the variable will contain the last... Learn more: https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_ecmascript_bestpractices.html#scopeforinvariable",
+      "engine": "pmd",
+      "severity": 2,
+      "tags": [
+        "BestPractices",
+        "JavaScript"
+      ],
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_ecmascript_bestpractices.html#scopeforinvariable"
+      ]
+    },
+    {
+      "name": "UnnecessaryTypeAttribute",
+      "description": "In HTML5 the explicit type attribute for link and script elements is not needed. Modern browsers expect stylesheets to be in CSS and scripts to use JavaScript.",
+      "engine": "pmd",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "HTML"
+      ],
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_html_bestpractices.html#unnecessarytypeattribute"
+      ]
+    },
+    {
+      "name": "UnusedLocalVariable",
+      "description": "Detects when a local variable is declared and/or assigned but not used.",
+      "engine": "pmd",
+      "severity": 3,
+      "tags": [
+        "Recommended",
+        "BestPractices",
+        "Apex"
+      ],
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_bestpractices.html#unusedlocalvariable"
+      ]
+    },
+    {
+      "name": "UseAltAttributeForImages",
+      "description": "Always use an \"alt\" attribute for images. This provides an alternative text and is extensively used by screen readers.",
+      "engine": "pmd",
+      "severity": 3,
+      "tags": [
+        "BestPractices",
+        "HTML"
+      ],
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_html_bestpractices.html#usealtattributeforimages"
+      ]
+    },
+    {
+      "name": "UseBaseWithParseInt",
+      "description": "This rule checks for usages of parseInt. While the second parameter is optional and usually defaults to 10 (base/radix is 10 for a decimal number), different implementations may behave differently. It also improves readability, if the base is given. See also: parseInt()",
+      "engine": "pmd",
+      "severity": 2,
+      "tags": [
+        "BestPractices",
+        "JavaScript"
+      ],
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_ecmascript_bestpractices.html#usebasewithparseint"
+      ]
+    },
+    {
+      "name": "ApexCRUDViolation",
+      "description": "Validates that DML operations and SOQL queries are preceded by the appropriate CRUD permission checks (isCreateable, isUpdateable, isAccessible, isDeletable) or use WITH USER_MODE.",
+      "engine": "pmd",
+      "severity": 1,
+      "tags": [
+        "Recommended",
+        "Security",
+        "Apex"
+      ],
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_security.html#apexcrudviolation"
+      ]
+    },
+    {
+      "name": "ApexSOQLInjection",
+      "description": "Detects the usage of untrusted / unescaped variables in DML queries. Dynamic SOQL built from user-controlled input without bind variables or String.escapeSingleQuotes() is vulnerable to injection.",
+      "engine": "pmd",
+      "severity": 1,
+      "tags": [
+        "Recommended",
+        "Security",
+        "Apex"
+      ],
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_security.html#apexsoqlinjection"
+      ]
+    },
+    {
+      "name": "AvoidDmlStatementsInLoops",
+      "description": "Detects DML statements (insert, update, upsert, delete, merge) placed inside loops. Each iteration consumes a DML governor limit; accumulate records and DML once outside the loop.",
+      "engine": "pmd",
+      "severity": 1,
+      "tags": [
+        "Recommended",
+        "Performance",
+        "Apex"
+      ],
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_performance.html#avoiddmlstatementsinloops"
+      ]
+    },
+    {
+      "name": "AvoidSoqlInLoops",
+      "description": "Detects SOQL queries placed inside loops. Each iteration consumes a SOQL governor limit; collect IDs, query once outside the loop, then process results.",
+      "engine": "pmd",
+      "severity": 1,
+      "tags": [
+        "Recommended",
+        "Performance",
+        "Apex"
+      ],
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_performance.html#avoidsoqlinloops"
+      ]
+    },
+    {
+      "name": "ApexSharingViolations",
+      "description": "Detects Apex classes that do not explicitly declare a sharing model (with sharing, without sharing, or inherited sharing). Classes without an explicit declaration inherit the sharing of their caller, which can be unpredictable.",
+      "engine": "pmd",
+      "severity": 2,
+      "tags": [
+        "Recommended",
+        "Security",
+        "Apex"
+      ],
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_security.html#apexsharingviolations"
+      ]
+    },
+    {
+      "name": "AvoidHardcodingId",
+      "description": "Detects hardcoded 15- or 18-character Salesforce record IDs. IDs differ between orgs and sandboxes; use Custom Labels, Custom Metadata, or SOQL lookups instead.",
+      "engine": "pmd",
+      "severity": 2,
+      "tags": [
+        "Recommended",
+        "BestPractices",
+        "Apex"
+      ],
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_bestpractices.html#avoidhardcodingid"
+      ]
+    },
+    {
+      "name": "ApexDoc",
+      "description": "Validates that global and public Apex methods and classes have ApexDoc comments. Good documentation improves maintainability and is required before publishing in managed packages.",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "Documentation",
+        "Apex"
+      ],
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_documentation.html#apexdoc"
+      ]
+    },
+    {
+      "name": "OneDeclarationPerLine",
+      "description": "Apex allows the declaration of multiple variables on one line. This harms readability and should be avoided.",
+      "engine": "pmd",
+      "severity": 4,
+      "tags": [
+        "BestPractices",
+        "Apex"
+      ],
+      "resources": [
+        "https://docs.pmd-code.org/pmd-doc-7.26.0/pmd_rules_apex_codestyle.html#onedeclarationperline"
+      ]
+    }
+  ]
+}
