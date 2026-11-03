@@ -1,4 +1,6 @@
 public with sharing class AccountSummaryPrompt {
+    private static final Integer MAX_ROWS = 200;
+
     //CapabilityType='PromptTemplateType://einstein_gpt__fieldCompletion'
     @InvocableMethod(label='Soft Drink Orders'
                      description='Find Soft Drink for Account'
@@ -14,6 +16,7 @@ public with sharing class AccountSummaryPrompt {
 
         List<Soft_Drink_Order__c> softDrinkOrders = [
             SELECT Soft_Drink__r.Name, Quantity__c FROM Soft_Drink_Order__c WHERE Account__c = :accountId
+            WITH USER_MODE LIMIT :MAX_ROWS
         ];
         if (softDrinkOrders.isEmpty()) {
             lines.add('There are no Soft Drink records.');
@@ -23,7 +26,10 @@ public with sharing class AccountSummaryPrompt {
                                     new List<Object>{ drink.Soft_Drink__r.Name, drink.Quantity__c }));
         }
 
-        List<Case> cases = [SELECT Reason, Subject, Description FROM Case WHERE AccountId = :accountId];
+        List<Case> cases = [
+            SELECT Reason, Subject, Description FROM Case WHERE AccountId = :accountId
+            WITH USER_MODE LIMIT :MAX_ROWS
+        ];
         if (cases.isEmpty()) {
             lines.add('There are no Cases Records.');
         }

@@ -19,7 +19,7 @@ private class ZipCodeNameTest {
     }
 
     @IsTest
-    static void returnsCityForEachZipCode() {
+    static void getCityForZipCode_validResults_returnsCityPerZip() {
         Test.setMock(HttpCalloutMock.class, new Mock(200,
             '{"results":{"90210":[{"city":"Beverly Hills"}],"10001":[{"city":"New York"}]}}'));
         Test.startTest();
@@ -29,7 +29,7 @@ private class ZipCodeNameTest {
     }
 
     @IsTest
-    static void returnsNotFoundForUnknownOrMalformedData() {
+    static void getCityForZipCode_unknownOrMalformedData_returnsNotFound() {
         Test.setMock(HttpCalloutMock.class, new Mock(200,
             '{"results":{"11111":[],"22222":["x"],"33333":[{"city":""}]}}'));
         Test.startTest();
@@ -39,7 +39,7 @@ private class ZipCodeNameTest {
     }
 
     @IsTest
-    static void returnsNotFoundWhenResultsMissingOrApiFails() {
+    static void getCityForZipCode_missingResultsOrApiError_returnsNotFound() {
         Test.setMock(HttpCalloutMock.class, new Mock(200, '{"query":{}}'));
         System.assertEquals(new List<String>{ 'City not found' }, ZipCodeName.getCityForZipCode(new List<Integer>{ 90210 }));
 
@@ -48,7 +48,7 @@ private class ZipCodeNameTest {
     }
 
     @IsTest
-    static void emptyInputReturnsEmptyList() {
+    static void getCityForZipCode_emptyInput_returnsEmptyList() {
         System.assertEquals(0, ZipCodeName.getCityForZipCode(null).size());
         System.assertEquals(0, ZipCodeName.getCityForZipCode(new List<Integer>()).size());
     }

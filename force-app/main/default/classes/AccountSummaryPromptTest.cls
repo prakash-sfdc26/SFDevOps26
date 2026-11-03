@@ -8,7 +8,7 @@ private class AccountSummaryPromptTest {
     }
 
     @IsTest
-    static void summarisesOrdersAndCases() {
+    static void getSoftDrinkData_ordersAndCases_returnsOneLinePerRecord() {
         Account acc = TestDataFactory.createAccount('Acme');
         Soft_Drink__c drink = TestDataFactory.createSoftDrink('Cola', 'Best');
         TestDataFactory.createSoftDrinkOrder(drink.Id, acc.Id, 1, 12);
@@ -24,14 +24,14 @@ private class AccountSummaryPromptTest {
     }
 
     @IsTest
-    static void reportsWhenNoOrdersOrCases() {
+    static void getSoftDrinkData_noOrdersOrCases_returnsPlaceholderLines() {
         Account acc = TestDataFactory.createAccount('Empty');
         String prompt = AccountSummaryPrompt.getSoftDrinkData(request(acc))[0].Prompt;
         System.assertEquals('There are no Soft Drink records.\nThere are no Cases Records.', prompt);
     }
 
     @IsTest
-    static void rejectsAnythingButOneRequest() {
+    static void getSoftDrinkData_nullOrEmptyRequests_throwsListException() {
         for (List<AccountSummaryPrompt.Request> bad : new List<List<AccountSummaryPrompt.Request>>{
             null, new List<AccountSummaryPrompt.Request>()
         }) {

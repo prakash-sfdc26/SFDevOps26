@@ -20,7 +20,7 @@ public with sharing class CaseCopilot {
                 freshDeskId__c = TicketSystem.createTicket(inp.Subject, email, inp.Description, 1, 2)
             ));
         }
-        insert cases;
+        insert as user cases;
 
         List<Output> outputs = new List<Output>();
         for (Case c : cases) {

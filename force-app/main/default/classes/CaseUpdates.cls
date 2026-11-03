@@ -30,7 +30,13 @@ public with sharing class CaseUpdates {
 
         Map<String, Id> queueIdByName = new Map<String, Id>();
         if (!queueNames.isEmpty()) {
-            for (Group g : [SELECT Id, DeveloperName FROM Group WHERE Type = 'Queue' AND DeveloperName IN :queueNames]) {
+            // Queue developer names are unique, so one row per requested name is the most we can get back
+            Integer maxQueues = queueNames.size();
+            for (Group g : [
+                SELECT Id, DeveloperName FROM Group
+                WHERE Type = 'Queue' AND DeveloperName IN :queueNames
+                WITH USER_MODE LIMIT :maxQueues
+            ]) {
                 queueIdByName.put(g.DeveloperName.toLowerCase(), g.Id);
             }
         }
@@ -67,7 +73,7 @@ public with sharing class CaseUpdates {
                 }
                 casesToUpdate.add(c);
                 resultIndexForCase.add(results.size() - 1);
-            } catch (Exception e) {
+            } catch (StringException e) {
                 output.message = 'Queue found but error updating Case: ' + e.getMessage();
                 output.success = false;
             }
@@ -75,7 +81,7 @@ public with sharing class CaseUpdates {
 
         if (!casesToUpdate.isEmpty()) {
             // Partial success so one bad Case does not fail the rest of the batch
-            List<Database.SaveResult> saveResults = Database.update(casesToUpdate, false);
+            List<Database.SaveResult> saveResults = Database.update(casesToUpdate, false, AccessLevel.USER_MODE);
             for (Integer i = 0; i < saveResults.size(); i++) {
                 OutputWrapper output = results[resultIndexForCase[i]];
                 if (saveResults[i].isSuccess()) {

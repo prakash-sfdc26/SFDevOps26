@@ -15,7 +15,7 @@ public with sharing class SoftDrinkOrderController {
                 Price__c = inp.price
             ));
         }
-        insert orders;
+        insert as user orders;
         return orders;
     }
 

@@ -2,7 +2,7 @@
 private class SoftDrinkOrderControllerTest {
 
     @IsTest
-    static void createsOrdersInBulk() {
+    static void createSoftDrinkOrder_multipleInputs_insertsAllOrders() {
         Soft_Drink__c drink = TestDataFactory.createSoftDrink('Cola', 'Best');
 
         List<SoftDrinkOrderController.Input> inputs = new List<SoftDrinkOrderController.Input>();
@@ -27,7 +27,7 @@ private class SoftDrinkOrderControllerTest {
     }
 
     @IsTest
-    static void emptyInputReturnsEmptyList() {
+    static void createSoftDrinkOrder_emptyInput_returnsEmptyList() {
         System.assertEquals(0, SoftDrinkOrderController.createSoftDrinkOrder(null).size());
         System.assertEquals(0, SoftDrinkOrderController.createSoftDrinkOrder(new List<SoftDrinkOrderController.Input>()).size());
     }

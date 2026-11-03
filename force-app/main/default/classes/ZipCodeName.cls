@@ -1,8 +1,7 @@
 public with sharing class ZipCodeName {
 
-    private static final String ENDPOINT = 'https://api.zipcodestack.com/v1/search';
-    // TODO: move to a Named Credential (callout:...) so the key is not stored in source
-    private static final String API_KEY = 'YOUR_API_KEY';
+    // Named Credential 'ZipCodeStack' (URL https://api.zipcodestack.com) supplies the host and the apikey header
+    private static final String ENDPOINT = 'callout:ZipCodeStack/v1/search';
     private static final String NOT_FOUND = 'City not found';
 
     @InvocableMethod(callout=true
@@ -21,7 +20,6 @@ public with sharing class ZipCodeName {
         HttpRequest req = new HttpRequest();
         req.setEndpoint(ENDPOINT + '?codes=' + EncodingUtil.urlEncode(String.join(codes, ','), 'UTF-8') + '&country=us');
         req.setMethod('GET');
-        req.setHeader('apikey', API_KEY);
 
         Map<String, Object> results = new Map<String, Object>();
         HttpResponse res = new Http().send(req);

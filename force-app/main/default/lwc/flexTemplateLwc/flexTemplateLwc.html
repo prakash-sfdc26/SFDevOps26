@@ -1,26 +1,41 @@
-<!-- myComponent.html -->
 <template>
     <lightning-card title="Customer Pitch Maker">
-        <div class="slds-m-around_medium">
-            <lightning-input label="Account" value={accName} onchange={handleAccountChange} type="text"></lightning-input>
-            <lightning-combobox name="rating"
-                        label="Rating"
-                        value={ratingValue}
-                        placeholder="Select Rating"
-                        options={ratingOptions}
-                        onchange={handleRatingChange}></lightning-combobox>
-            <lightning-button label="Submit" onclick={handleSubmit}></lightning-button>
-            <br/>
-            <br/>
+        <div class="slds-m-around_medium slds-is-relative">
+            <lightning-input
+                label="Account"
+                type="text"
+                value={accountName}
+                required
+                onchange={handleAccountChange}
+            ></lightning-input>
+            <lightning-combobox
+                name="rating"
+                label="Rating"
+                value={ratingValue}
+                placeholder="Select Rating"
+                options={ratingOptions}
+                required
+                onchange={handleRatingChange}
+            ></lightning-combobox>
+            <lightning-button
+                class="slds-m-top_small"
+                label="Submit"
+                variant="brand"
+                disabled={isSubmitDisabled}
+                onclick={handleSubmit}
+            ></lightning-button>
 
-            <lightning-formatted-rich-text value={response}></lightning-formatted-rich-text>
-            
+            <template lwc:if={errorMessage}>
+                <div class="slds-m-top_medium slds-text-color_error" role="alert">{errorMessage}</div>
+            </template>
+
+            <div class="slds-m-top_medium">
+                <lightning-formatted-rich-text value={response}></lightning-formatted-rich-text>
+            </div>
+
+            <template lwc:if={isLoading}>
+                <lightning-spinner alternative-text="Loading" size="small"></lightning-spinner>
+            </template>
         </div>
     </lightning-card>
-<template if:true={isLoading}>
-    <div>
-        <lightning-spinner alternative-text="Loading" size="small"></lightning-spinner>
-    </div>
-</template>
-
 </template>

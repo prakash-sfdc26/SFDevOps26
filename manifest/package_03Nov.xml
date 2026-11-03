@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>AccountSummaryPrompt</members>
+        <members>AccountSummaryPromptTest</members>
+        <members>AccountTriggerHandler</members>
+        <members>AccountTriggerTest</members>
+        <members>Calculator</members>
+        <members>CalculatorTest</members>
+        <members>CaseCopilot</members>
+        <members>CaseCopilotTest</members>
+        <members>CaseUpdates</members>
+        <members>CaseUpdatesDataCloud</members>
+        <members>CaseUpdatesDataCloudTest</members>
+        <members>CaseUpdatesTest</members>
+        <members>FlexTemplateController</members>
+        <members>FlexTemplateControllerTest</members>
+        <members>SoftDrinkOrderController</members>
+        <members>SoftDrinkOrderControllerTest</members>
+        <members>SoftDrinkOrderStatus</members>
+        <members>SoftDrinkOrderStatusTest</members>
+        <members>SoftDrinkOrderValidationTest</members>
+        <members>TestDataFactory</members>
+        <members>TicketSystem</members>
+        <members>TicketSystemTest</members>
+        <members>UserInfoHandler</members>
+        <members>UserInfoHandlerTest</members>
+        <members>ZipCodeName</members>
+        <members>ZipCodeNameTest</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>AccountTrigger</members>
+        <name>ApexTrigger</name>
+    </types>
+    <types>
+        <members>Certification__c.Duration__c</members>
+        <members>Soft_Drink_Order__c.Account__c</members>
+        <members>Soft_Drink_Order__c.Order_Number__c</members>
+        <members>Soft_Drink_Order__c.Price__c</members>
+        <members>Soft_Drink_Order__c.Quantity__c</members>
+        <members>Soft_Drink_Order__c.Soft_Drink__c</members>
+        <members>Soft_Drink_Order__c.Status__c</members>
+        <members>Soft_Drink__c.Description__c</members>
+        <members>Soft_Drink__c.Id__c</members>
+        <members>Soft_Drink__c.Image__c</members>
+        <members>Soft_Drink__c.Price__c</members>
+        <members>Soft_Drink__c.Quantity_Left__c</members>
+        <members>Soft_Drink__c.Quantity_Used__c</members>
+        <members>Soft_Drink__c.Rating__c</members>
+        <members>Soft_Drink__c.Status__c</members>
+        <members>Soft_Drink__c.Sugar__c</members>
+        <members>Soft_Drink__c.Tags__c</members>
+        <members>Soft_Drink__c.Total_Quantity__c</members>
+        <members>Soft_Drink__c.brewery_Name__c</members>
+        <members>Soft_Drink__c.brewery_id__c</members>
+        <name>CustomField</name>
+    </types>
+    <types>
+        <members>Certification__c</members>
+        <members>Soft_Drink_Order__c</members>
+        <members>Soft_Drink__c</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>Soft_Drink_Order__c</members>
+        <members>Soft_Drink__c</members>
+        <name>CustomTab</name>
+    </types>
+    <types>
+        <members>AcademicOperations_UtilityBar</members>
+        <members>AdvertisingInventoryCalendar_UtilityBar</members>
+        <members>CommandCenterApp_UtilityBar</members>
+        <members>ContactCenter_UtilityBar</members>
+        <members>CrisisCenter_UtilityBar</members>
+        <members>DataGovernanceConsole_UtilityBar</members>
+        <members>ExpressionSetConsole_UtilityBar</members>
+        <members>FlowsApp_UtilityBar</members>
+        <members>LightningSalesConsole_UtilityBar</members>
+        <members>LightningSales_UtilityBar</members>
+        <members>LightningService_UtilityBar</members>
+        <members>MediaAdSalesManagement_UtilityBar</members>
+        <members>RevenueCloudConsole_UtilityBar</members>
+        <members>SalesCloudMobile_UtilityBar</members>
+        <members>Soft_Drink_Order_Record_Page</members>
+        <members>Soft_Drink_Record_Page</members>
+        <name>FlexiPage</name>
+    </types>
+    <types>
+        <members>Create_a_Task_Flow</members>
+        <members>Initiate_Return</members>
+        <members>Soft_Drink_Order_Follow_Up</members>
+        <members>Update_Soft_Drink_Flow</members>
+        <members>sfdc_default_ReportExport_Protection_Flow</members>
+        <name>Flow</name>
+    </types>
+    <types>
+        <members>Create_a_Task_Flow</members>
+        <members>Initiate_Return</members>
+        <members>Update_Soft_Drink_Flow</members>
+        <members>sfdc_default_ReportExport_Protection_Flow</members>
+        <name>FlowDefinition</name>
+    </types>
+    <types>
+        <members>Certification__c-Certification Layout</members>
+        <name>Layout</name>
+    </types>
+    <types>
+        <members>flexTemplateLwc</members>
+        <name>LightningComponentBundle</name>
+    </types>
+    <types>
+        <members>Admin</members>
+        <members>Analytics Cloud Integration User</members>
+        <members>Analytics Cloud Security User</members>
+        <members>Anypoint Integration</members>
+        <members>Authenticated Website</members>
+        <members>B2B Reordering Portal Buyer Profile</members>
+        <members>Chatter External User</members>
+        <members>Chatter Free User</members>
+        <members>Chatter Moderator User</members>
+        <members>ContractManager</members>
+        <members>Cross Org Data Proxy User</members>
+        <members>Custom%3A Marketing Profile</members>
+        <members>Custom%3A Sales Profile</members>
+        <members>Custom%3A Support Profile</members>
+        <members>Customer Community Login User</members>
+        <members>Customer Community Plus Login User</members>
+        <members>Customer Community Plus User</members>
+        <members>Customer Community User</members>
+        <members>Customer Portal Manager Custom</members>
+        <members>Customer Portal Manager Standard</members>
+        <members>Einstein Agent User</members>
+        <members>External Apps Login User</members>
+        <members>External Einstein Agent User</members>
+        <members>External Identity User</members>
+        <members>Force%2Ecom - App Subscription User</members>
+        <members>Force%2Ecom - Free User</members>
+        <members>Gold Partner User</members>
+        <members>High Volume Customer Portal User</members>
+        <members>HighVolumePortal</members>
+        <members>Identity User</members>
+        <members>MarketingProfile</members>
+        <members>Minimum Access - API Only Integrations</members>
+        <members>Minimum Access - Salesforce</members>
+        <members>Partner App Subscription User</members>
+        <members>Partner Community Login User</members>
+        <members>Partner Community User</members>
+        <members>PlatformPortal</members>
+        <members>Read Only</members>
+        <members>Salesforce API Only System Integrations</members>
+        <members>Silver Partner User</members>
+        <members>SolutionManager</members>
+        <members>Standard</members>
+        <members>StandardAul</members>
+        <members>Work%2Ecom Only User</members>
+        <name>Profile</name>
+    </types>
+    <types>
+        <members>Soft_Drink_Order__c.Block_Expired_Or_Over_Stock_Update</members>
+        <name>ValidationRule</name>
+    </types>
+    <version>68.0</version>
+</Package>

@@ -3,15 +3,19 @@ public with sharing class FlexTemplateController {
     private static final String PROMPT_TEMPLATE = 'Customer_Pitch';
 
     @AuraEnabled
-    public static String getFlexTemplateResponse(String AccName, String rating) {
-        List<Account> accounts = [SELECT Id FROM Account WHERE Name LIKE :AccName LIMIT 1];
-        List<Product2> products = [SELECT Id FROM Product2 WHERE Rating__c = :rating LIMIT 2];
-        List<Soft_Drink__c> softDrinks = [SELECT Id FROM Soft_Drink__c WHERE Rating__c = :rating LIMIT 2];
+    public static String getFlexTemplateResponse(String accountName, String rating) {
+        if (String.isBlank(accountName) || String.isBlank(rating)) {
+            throw auraError('Enter an Account name and select a Rating.');
+        }
+
+        List<Account> accounts = [SELECT Id FROM Account WHERE Name LIKE :accountName WITH USER_MODE LIMIT 1];
+        List<Product2> products = [SELECT Id FROM Product2 WHERE Rating__c = :rating WITH USER_MODE LIMIT 2];
+        List<Soft_Drink__c> softDrinks = [SELECT Id FROM Soft_Drink__c WHERE Rating__c = :rating WITH USER_MODE LIMIT 2];
 
         // The template needs one Account plus two Products and two Soft Drinks
         if (accounts.isEmpty() || products.size() < 2 || softDrinks.size() < 2) {
             throw auraError(
-                'Could not find an Account matching "' + AccName + '" and at least two Products and two Soft Drinks rated "' + rating + '".'
+                'Could not find an Account matching "' + accountName + '" and at least two Products and two Soft Drinks rated "' + rating + '".'
             );
         }
 

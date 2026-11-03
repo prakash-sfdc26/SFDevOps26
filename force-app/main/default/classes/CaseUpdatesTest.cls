@@ -9,7 +9,7 @@ private class CaseUpdatesTest {
     }
 
     @IsTest
-    static void assignsCaseToQueue() {
+    static void getQueueIdAndAssignCase_existingQueue_assignsCase() {
         Group queue = TestDataFactory.createCaseQueue('Support_Queue');
         Case c = new Case(Subject = 'Needs owner');
         insert c;
@@ -28,7 +28,7 @@ private class CaseUpdatesTest {
     }
 
     @IsTest
-    static void queueFoundWithoutCaseIdOnlyReturnsQueue() {
+    static void getQueueIdAndAssignCase_noCaseId_returnsQueueOnly() {
         Group queue = TestDataFactory.createCaseQueue('Support_Queue');
         List<CaseUpdates.OutputWrapper> results = CaseUpdates.getQueueIdAndAssignCase(
             new List<CaseUpdates.InputWrapper>{ input('Support_Queue', null) }
@@ -39,7 +39,7 @@ private class CaseUpdatesTest {
     }
 
     @IsTest
-    static void reportsMissingAndBlankQueue() {
+    static void getQueueIdAndAssignCase_missingOrBlankQueue_reportsFailure() {
         List<CaseUpdates.OutputWrapper> results = CaseUpdates.getQueueIdAndAssignCase(new List<CaseUpdates.InputWrapper>{
             input('Does_Not_Exist', null), input('', null)
         });
@@ -51,7 +51,7 @@ private class CaseUpdatesTest {
     }
 
     @IsTest
-    static void reportsInvalidAndFailedCaseUpdatesWithoutFailingTheBatch() {
+    static void getQueueIdAndAssignCase_invalidOrDeletedCase_doesNotFailBatch() {
         TestDataFactory.createCaseQueue('Support_Queue');
         Case good = new Case(Subject = 'Good');
         Case deleted = new Case(Subject = 'Deleted');
@@ -72,7 +72,7 @@ private class CaseUpdatesTest {
     }
 
     @IsTest
-    static void emptyRequestsReturnEmptyList() {
+    static void getQueueIdAndAssignCase_emptyRequests_returnsEmptyList() {
         System.assertEquals(0, CaseUpdates.getQueueIdAndAssignCase(null).size());
         System.assertEquals(0, CaseUpdates.getQueueIdAndAssignCase(new List<CaseUpdates.InputWrapper>()).size());
     }

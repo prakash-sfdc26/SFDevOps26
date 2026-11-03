@@ -1,13 +1,14 @@
-import { LightningElement, track } from 'lwc';
+import { LightningElement } from 'lwc';
 import getFlexTemplateResponse from '@salesforce/apex/FlexTemplateController.getFlexTemplateResponse';
 
+const DEFAULT_ERROR = 'Something went wrong while generating the pitch.';
+
 export default class FlexTemplateLwc extends LightningElement {
-
-
-     ratingValue;
-     response;
-     accName;
-     isLoading = false;
+    accountName = '';
+    ratingValue;
+    response;
+    errorMessage;
+    isLoading = false;
 
     ratingOptions = [
         { label: 'Best', value: 'Best' },
@@ -15,36 +16,32 @@ export default class FlexTemplateLwc extends LightningElement {
         { label: 'Low', value: 'Low' }
     ];
 
+    get isSubmitDisabled() {
+        return this.isLoading || !this.accountName || !this.ratingValue;
+    }
+
     handleRatingChange(event) {
         this.ratingValue = event.detail.value;
-        console.log('Rating Value: ' + this.ratingValue);
     }
 
     handleAccountChange(event) {
-        this.accName = event.target.value;
-        console.log('Account Id: ' + this.accName);
-
+        this.accountName = event.target.value;
     }
 
-    handleSubmit(){
+    async handleSubmit() {
         this.isLoading = true;
-        console.log('Rating Value: ' + this.ratingValue);
-        console.log('Account Id: ' + this.accName);
+        this.errorMessage = undefined;
+        this.response = undefined;
 
-        getFlexTemplateResponse({ AccName: this.accName ,rating: this.ratingValue})
-        .then(result => {
-            this.response = result;
-            console.log('Response: ' + this.response);
+        try {
+            this.response = await getFlexTemplateResponse({
+                accountName: this.accountName,
+                rating: this.ratingValue
+            });
+        } catch (error) {
+            this.errorMessage = error?.body?.message || DEFAULT_ERROR;
+        } finally {
             this.isLoading = false;
-        })
-        .catch(error => {
-            console.log('Error: ' + error);
-            this.isLoading = false;
-        });
-
-
-
+        }
     }
-
-    
 }

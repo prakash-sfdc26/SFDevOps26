@@ -4,12 +4,12 @@ Guidance for Claude Code (claude.ai/code) in this repository.
 
 ## Overview
 
-Salesforce DX project (`DevOps_Oct26`, source API 68.0) for learning Salesforce DevOps. Single package directory: `force-app/`. No LWC/Aura components yet, so the npm lint/Jest scripts have nothing to act on.
+Salesforce DX project (`DevOps_Oct26`, source API 68.0) for learning Salesforce DevOps. Single package directory: `force-app/`. One LWC (`flexTemplateLwc`, with a Jest test). Node/npm are not installed on the dev machine, so the npm lint/Jest/Prettier scripts cannot run until they are.
 
 ## Commands
 
 - Deploy / retrieve: `sf project deploy start`, `sf project retrieve start` (add `--manifest manifest/package.xml` for the wildcard manifest)
-- Apex tests: `sf apex run test --test-level RunLocalTests --synchronous` (one class: `--class-names <Name>`). No test classes exist yet.
+- Apex tests: `sf apex run test --test-level RunLocalTests --synchronous` (one class: `--class-names <Name>`). Every class has a `*Test` class; 38 local tests passed on the last dry run.
 - Anonymous Apex / SOQL: `scripts/apex/hello.apex`, `scripts/soql/account.soql`
 - Format: `npm run prettier` (check only: `npm run prettier:verify`); covers Apex, triggers, XML
 - LWC: `npm run lint`, `npm test`; single test: `npx sfdx-lwc-jest -- <path-to-test>`
@@ -22,9 +22,45 @@ Salesforce DX project (`DevOps_Oct26`, source API 68.0) for learning Salesforce 
 ## Code notes
 
 - `Calculator.cls` has a version-history header; append a row per change (version, date, developer, description).
-- `AccountTrigger.trigger` is an unfinished stub with a syntax error (`if(trigger.isUpdate)( ... )` uses parentheses instead of braces) and won't deploy until fixed. It has no handler class; add logic via a handler, not inline.
-- Other metadata: custom object `Certification__c` (`Duration__c` field, layout); profiles `Admin` and `B2B Reordering Portal Buyer Profile`.
+- `AccountTrigger.trigger` is a logic-free stub that delegates to `AccountTriggerHandler` (before/after insert/update). Add logic in the handler, never in the trigger. The handler's static `hasRun` flag follows the Trigger rule but blocks every 200-record chunk after the first once real DML is added; revisit then.
+- Other metadata: objects `Certification__c`, `Soft_Drink__c`, `Soft_Drink_Order__c` (validation rule `Block_Expired_Or_Over_Stock_Update`); flows incl. `Soft_Drink_Order_Follow_Up` (record-triggered, creates a Task); 44 profiles; flexipages, tabs, layout.
+- `ZipCodeName` calls `callout:ZipCodeStack`. That Named Credential is not in the repo; create it in the org (URL `https://api.zipcodestack.com`, `apikey` header) or the action fails at runtime. Tests use a mock, so they will not catch it.
+- `SoftDrinkOrderStatus` is deliberately `without sharing` (anyone can look up an order status by number), so it has no `WITH USER_MODE`.
 - `README.md` has unresolved merge conflict markers (`<<<<<<< HEAD` ... `>>>>>>>`) mixing a project blurb with the stock Salesforce DX README.
+
+## Learnings (gotchas found while working in this project)
+
+Deploying
+- The only authorized org is `AFDevOrg`; the default alias in `.sf/config.json` (`DevHubOrg`) is stale. Always pass `--target-org AFDevOrg`.
+- The org has no source tracking, so `sf project deploy preview` fails. Use `sf project deploy start --dry-run --source-dir <folder>`; its result table marks each component Created / Changed / Unchanged.
+- Dry-run first, then deploy the same `--source-dir` set with the same `--test-level RunLocalTests`. A dry run catches limits tests never will (see Metadata limits).
+- Do not deploy `profiles/` blindly: a dry run showed all 44 as Changed vs the org, and deploying overwrites org permissions (incl. `Admin`). Diff against a fresh retrieve first.
+- `.forceignore` excludes `__tests__`, so LWC Jest files are never deployed.
+- In zsh, build repeated flags as an array (`args+=(--source-dir "$d")`; `"${args[@]}"`). A plain string variable is not word-split and the CLI reports "Unexpected argument".
+
+Metadata limits (enforced at deploy, not by tests)
+- Validation rule: `fullName` max 40 characters, `description` max 255.
+- A new `*Test.cls` still needs its own `-meta.xml` (API 68.0, Active).
+
+Data model
+- `Soft_Drink__c.Quantity_Used__c` is a roll-up of every order's `Quantity__c` and `Quantity_Left__c = Total_Quantity__c - Quantity_Used__c`. On update, Quantity Left already counts that order's saved quantity, so a stock check must add `PRIORVALUE(Quantity__c)` back, or unrelated edits get blocked.
+- `Soft_Drink_Order__c.Account__c` is an optional lookup; guard for null before using it (e.g. as a Task `WhatId`). `Soft_Drink__c` is master-detail and not re-parentable.
+- Validation rules fire inside tests. `TestDataFactory.createSoftDrink` defaults `Total_Quantity__c` to 1000 so order tests do not trip the stock rule; pass an explicit quantity to test the rule.
+
+Apex conventions applied here
+- Use `WITH USER_MODE` plus `LIMIT` on queries, `insert as user` / `Database.update(list, false, AccessLevel.USER_MODE)` for DML, and catch specific exceptions (e.g. `StringException`) instead of `Exception`.
+- `LIMIT` accepts a bind variable (`LIMIT :maxRows`).
+- Test methods are named `methodName_scenario_expectedOutcome` and use `Assert` class methods.
+
+LWC
+- Jest tests import `createElement` from `@lwc/engine-dom`; importing it from `lwc` shows editor error `LWC1702`.
+- `lwc/jsconfig.json` is generated and git-ignored; `"ignoreDeprecations": "6.0"` silences the `baseUrl` TypeScript warning locally and may be overwritten by the Salesforce extension.
+- The Jest test has not been run yet (no Node on this machine); run `npm install && npm test` once Node is available.
+
+Working agreement
+- No Salesforce metadata skill or `salesforce-api-context` MCP is available in this setup. The owner waives the Initial Gate per type by asking to "write it manually"; still print the status line and checkpoint (`selected_skill=none mcp=unavailable`) and ask once before the first write of each new type.
+- The owner is learning Salesforce DevOps: briefly explain the why of each construct (formula functions, flow elements, limits) when writing metadata.
+- Dry-run, then ask before any real deploy. Work on a `feature/<description>` branch per the DevOps rule, not `main`.
 
 # Rule: Salesforce Metadata Generation
 

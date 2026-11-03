@@ -27,7 +27,7 @@ private class TicketSystemTest {
     }
 
     @IsTest
-    static void createTicketReturnsExternalIdOn201() {
+    static void createTicket_status201_returnsExternalId() {
         Test.setMock(HttpCalloutMock.class, new Mock(201, '{"id": 4242}'));
         Test.startTest();
         // Quotes in the input must not break the request
@@ -37,7 +37,7 @@ private class TicketSystemTest {
     }
 
     @IsTest
-    static void createTicketReturnsEmptyOnUnexpectedStatus() {
+    static void createTicket_unexpectedStatus_returnsEmptyString() {
         Test.setMock(HttpCalloutMock.class, new Mock(500, '{"error":"boom"}'));
         Test.startTest();
         String id = TicketSystem.createTicket('s', 'a@b.com', 'd', 1, 2);
@@ -46,7 +46,7 @@ private class TicketSystemTest {
     }
 
     @IsTest
-    static void createTicketReturnsEmptyOnCalloutException() {
+    static void createTicket_calloutException_returnsEmptyString() {
         Test.setMock(HttpCalloutMock.class, new Mock('Unauthorized endpoint'));
         Test.startTest();
         String id = TicketSystem.createTicket('s', 'a@b.com', 'd', 1, 2);

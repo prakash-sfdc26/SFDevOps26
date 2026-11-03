@@ -10,7 +10,7 @@ private class CaseUpdatesDataCloudTest {
     }
 
     @IsTest
-    static void assignsCaseToQueueAndSetsPriority() {
+    static void getQueueIdAndAssignCase_existingQueue_assignsCaseAndSetsPriority() {
         Group queue = TestDataFactory.createCaseQueue('Support_Queue');
         Case c = new Case(Subject = 'Needs owner', Priority = 'Low');
         insert c;
@@ -30,7 +30,7 @@ private class CaseUpdatesDataCloudTest {
     }
 
     @IsTest
-    static void reportsMissingQueue() {
+    static void getQueueIdAndAssignCase_missingQueue_reportsFailure() {
         List<CaseUpdatesDataCloud.OutputWrapper> results = CaseUpdatesDataCloud.getQueueIdAndAssignCase(
             new List<CaseUpdatesDataCloud.InputWrapper>{ input('Nope', null, 'High') }
         );
@@ -39,7 +39,7 @@ private class CaseUpdatesDataCloudTest {
     }
 
     @IsTest
-    static void emptyRequestsReturnEmptyList() {
+    static void getQueueIdAndAssignCase_emptyRequests_returnsEmptyList() {
         System.assertEquals(0, CaseUpdatesDataCloud.getQueueIdAndAssignCase(null).size());
         System.assertEquals(0, CaseUpdatesDataCloud.getQueueIdAndAssignCase(new List<CaseUpdatesDataCloud.InputWrapper>()).size());
     }

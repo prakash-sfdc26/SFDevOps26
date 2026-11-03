@@ -20,7 +20,7 @@ private class CaseCopilotTest {
     }
 
     @IsTest
-    static void createsCasesAndStoresExternalId() {
+    static void createCase_validInput_insertsCasesWithExternalId() {
         Account acc = TestDataFactory.createAccount('Acme');
         Test.setMock(HttpCalloutMock.class, new TicketMock());
 
@@ -42,7 +42,7 @@ private class CaseCopilotTest {
     }
 
     @IsTest
-    static void emptyInputReturnsEmptyList() {
+    static void createCase_emptyInput_returnsEmptyList() {
         System.assertEquals(0, CaseCopilot.createCase(new List<CaseCopilot.Input>()).size());
         System.assertEquals(0, CaseCopilot.createCase(null).size());
     }

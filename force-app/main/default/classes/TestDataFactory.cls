@@ -7,8 +7,13 @@ public class TestDataFactory {
         return acc;
     }
 
+    // Default stock is generous so the order quantity validation rule never trips unrelated tests
     public static Soft_Drink__c createSoftDrink(String name, String rating) {
-        Soft_Drink__c drink = new Soft_Drink__c(Name = name, Rating__c = rating);
+        return createSoftDrink(name, rating, 1000);
+    }
+
+    public static Soft_Drink__c createSoftDrink(String name, String rating, Integer totalQuantity) {
+        Soft_Drink__c drink = new Soft_Drink__c(Name = name, Rating__c = rating, Total_Quantity__c = totalQuantity);
         insert drink;
         return drink;
     }
