@@ -1,0 +1,63 @@
+<template>
+    <div class="container">
+        <div class="header">
+            <h2 class="header-title">My Accounts</h2>
+            <template lwc:if={hasAccounts}>
+                <span class="header-count">{countLabel}</span>
+            </template>
+        </div>
+
+        <div class="body slds-is-relative">
+            <template lwc:if={isLoading}>
+                <lightning-spinner alternative-text="Loading Accounts" size="small"></lightning-spinner>
+            </template>
+
+            <template lwc:if={errorMessage}>
+                <div class="message slds-text-color_error" role="alert">{errorMessage}</div>
+            </template>
+
+            <template lwc:if={showEmptyState}>
+                <div class="message">No Accounts found.</div>
+            </template>
+
+            <template for:each={accounts} for:item="account">
+                <div
+                    key={account.id}
+                    class="card"
+                    role="button"
+                    tabindex="0"
+                    data-id={account.id}
+                    onclick={handleCardClick}
+                    onkeydown={handleCardKeydown}
+                >
+                    <div class="avatar" style={account.avatarStyle}>{account.initial}</div>
+
+                    <div class="details">
+                        <div class="account-name">{account.name}</div>
+                        <div class="detail-line">Industry: {account.industry}</div>
+                        <div class="detail-line">Phone: {account.phone}</div>
+                    </div>
+
+                    <div class="metrics">
+                        <div class="metric-label">Annual Revenue</div>
+                        <div class="revenue">
+                            <template lwc:if={account.hasRevenue}>
+                                <lightning-formatted-number
+                                    value={account.annualRevenue}
+                                    format-style="currency"
+                                    currency-code={currencyCode}
+                                    maximum-fraction-digits="0"
+                                ></lightning-formatted-number>
+                            </template>
+                            <template lwc:else>—</template>
+                        </div>
+                        <div class="rating">
+                            <span class="metric-label">Rating</span>
+                            <span class={account.ratingClass}>{account.ratingLabel} {account.ratingIcon}</span>
+                        </div>
+                    </div>
+                </div>
+            </template>
+        </div>
+    </div>
+</template>

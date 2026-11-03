@@ -9,7 +9,7 @@ Salesforce DX project (`DevOps_Oct26`, source API 68.0) for learning Salesforce 
 ## Commands
 
 - Deploy / retrieve: `sf project deploy start`, `sf project retrieve start` (add `--manifest manifest/package.xml` for the wildcard manifest)
-- Apex tests: `sf apex run test --test-level RunLocalTests --synchronous` (one class: `--class-names <Name>`). Every class has a `*Test` class; 38 local tests passed on the last dry run.
+- Apex tests: `sf apex run test --test-level RunLocalTests --synchronous` (one class: `--class-names <Name>`). Every class has a `*Test` class; 45 local tests passed on the last dry run.
 - Anonymous Apex / SOQL: `scripts/apex/hello.apex`, `scripts/soql/account.soql`
 - Format: `npm run prettier` (check only: `npm run prettier:verify`); covers Apex, triggers, XML
 - LWC: `npm run lint`, `npm test`; single test: `npx sfdx-lwc-jest -- <path-to-test>`
@@ -50,6 +50,7 @@ Data model
 Apex conventions applied here
 - Use `WITH USER_MODE` plus `LIMIT` on queries, `insert as user` / `Database.update(list, false, AccessLevel.USER_MODE)` for DML, and catch specific exceptions (e.g. `StringException`) instead of `Exception`.
 - `LIMIT` accepts a bind variable (`LIMIT :maxRows`).
+- `WITH USER_MODE` throws `System.SecurityException` when the user has no access to the object, and `QueryException` for a field they cannot read. Catch both (separate `catch` blocks; Apex has no multi-catch) to return a readable `AuraHandledException`.
 - Test methods are named `methodName_scenario_expectedOutcome` and use `Assert` class methods.
 
 LWC
